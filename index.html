@@ -1,245 +1,2403 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Amrendra Kumar Yadav – MEP &amp; Electrical Power Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #eef2f5;
+        --surface: #ffffff;
+        --ink: #14293d;
+        --muted: #51647a;
+        --line: #c9d4de;
+        --accent: #1c4fd6;
+        --hot: #e8a800;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #0e1824;
+          --surface: #15243436;
+          --ink: #e6edf4;
+          --muted: #9fb0c2;
+          --line: #2a3d52;
+          --accent: #7ea2ff;
+          --hot: #ffc531;
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #0e1824;
+        --surface: #15243436;
+        --ink: #e6edf4;
+        --muted: #9fb0c2;
+        --line: #2a3d52;
+        --accent: #7ea2ff;
+        --hot: #ffc531;
+        color-scheme: dark;
+      }
+      html {
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+        scroll-behavior: smooth;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          17px/1.65 "IBM Plex Sans",
+          system-ui,
+          sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Bricolage Grotesque", "IBM Plex Sans", sans-serif;
+        line-height: 1.1;
+        margin: 0;
+      }
+      a {
+        color: var(--accent);
+      }
+      :focus-visible {
+        outline: 3px solid var(--hot);
+        outline-offset: 3px;
+      }
+      .wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      nav {
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        font-weight: 500;
+        font-size: 15px;
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+      nav a:hover {
+        color: var(--ink);
+      }
+      .hero {
+        padding: 48px 0 56px;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8vw, 5.4rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        max-width: 12ch;
+      }
+      .hero p.role {
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: clamp(1.2rem, 3vw, 1.7rem);
+        font-weight: 500;
+        color: var(--accent);
+        margin: 18px 0 0;
+      }
+      .hero p.lede {
+        max-width: 60ch;
+        color: var(--muted);
+        margin: 18px 0 28px;
+      }
+      .btns {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 6px;
+        font-weight: 500;
+        text-decoration: none;
+        border: 2px solid var(--ink);
+        color: var(--ink);
+      }
+      .btn.main {
+        background: var(--ink);
+        color: var(--bg);
+      }
+      /* single-line diagram: the one memorable element */
+      .sld {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 44px;
+        color: var(--ink);
+      }
+      .sld .w {
+        stroke: currentColor;
+        stroke-width: 2.5;
+        fill: none;
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        animation: draw 2.4s ease-out 0.2s forwards;
+      }
+      .sld .p {
+        fill: var(--hot);
+        opacity: 0;
+        animation: on 0.4s ease-out 2.3s forwards;
+      }
+      .sld text {
+        font:
+          500 13px "IBM Plex Sans",
+          sans-serif;
+        fill: var(--muted);
+      }
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes on {
+        to {
+          opacity: 1;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .sld .w {
+          animation: none;
+          stroke-dashoffset: 0;
+        }
+        .sld .p {
+          animation: none;
+          opacity: 1;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      section {
+        padding: 56px 0;
+        border-top: 1px solid var(--line);
+      }
+      h2 {
+        font-size: clamp(1.7rem, 4vw, 2.4rem);
+        font-weight: 700;
+        margin-bottom: 28px;
+      }
+      .job {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 12px 32px;
+        padding: 0 0 36px;
+        margin-bottom: 36px;
+        border-bottom: 1px solid var(--line);
+      }
+      .job:last-child {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+      .job .when {
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .job h3 {
+        font-size: 1.35rem;
+        margin-bottom: 2px;
+      }
+      .job .org {
+        color: var(--accent);
+        font-weight: 500;
+        margin: 0 0 12px;
+      }
+      ul {
+        margin: 0;
+        padding-left: 1.1em;
+      }
+      li {
+        margin: 0 0 8px;
+        max-width: 68ch;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+      .box {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 22px;
+      }
+      .box h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+      .box p,
+      .box ul {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+      .tests {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .tests li {
+        margin: 0;
+        padding: 8px 14px;
+        border: 1px solid var(--line);
+        border-left: 4px solid var(--hot);
+        border-radius: 4px;
+        background: var(--surface);
+        max-width: none;
+        font-size: 15px;
+      }
+      .edu h3 {
+        font-size: 1.3rem;
+      }
+      .edu p {
+        margin: 6px 0 0;
+        color: var(--muted);
+      }
+      footer {
+        padding: 56px 0 64px;
+        border-top: 1px solid var(--line);
+      }
+      footer h2 {
+        margin-bottom: 14px;
+      }
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 32px;
+        font-size: 1.1rem;
+      }
+      .small {
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 36px;
+      }
+      @media (max-width: 700px) {
+        .job {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav aria-label="Sections">
+        <a href="#about">About</a><a href="#experience">Experience</a
+        ><a href="#testing">Testing</a><a href="#skills">Skills</a
+        ><a href="#education">Education</a><a href="#contact">Contact</a>
+      </nav>
+
+      <header class="hero" id="about">
+        <h1>Amrendra Kumar Yadav</h1>
+        <p class="role">MEP engineer, electrical and power systems</p>
+        <p class="lede">
+          Electrical and Electronics Engineer in Kathmandu working across MEP
+          coordination, high-voltage equipment testing, commissioning and
+          electrical system design, on commercial and industrial projects. I
+          work with architects, structural engineers, contractors and
+          consultants to deliver on schedule and within budget.
+        </p>
+        <div class="btns">
+          <a class="btn main" href="mailto:yadavamrendra083@gmail.com"
+            >Email me</a
+          ><a class="btn" href="#experience">See my experience</a>
+        </div>
+
+        <svg
+          class="sld"
+          viewBox="0 0 900 150"
+          role="img"
+          aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
+        >
+          <path
+            class="w"
+            d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
+          ></path>
+          <circle class="w" cx="170" cy="60" r="20"></circle>
+          <circle class="w" cx="320" cy="60" r="20"></circle>
+          <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
+          <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
+          <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
+          <text x="20" y="40">132 kV</text>
+          <text x="140" y="108">Transformer</text>
+          <text x="290" y="108">Transformer</text>
+          <text x="440" y="142">LV/MV switchgear</text>
+          <text x="570" y="142">Distribution</text>
+          <text x="725" y="142">Earthing</text>
+        </svg>
+      </header>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <article class="job">
+          <div class="when">March 2026 – present</div>
+          <div>
+            <h3>Electrical Engineer</h3>
+            <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
+            <ul>
+              <li>
+                Coordinate and supervise MEP installation: electrical, HVAC,
+                plumbing, fire protection and ELV systems, to design
+                specifications and international standards.
+              </li>
+              <li>
+                Review shop drawings, material submittals and method statements
+                across active sites.
+              </li>
+              <li>
+                Inspect sites and resolve technical issues during installation
+                to hold quality and timelines.
+              </li>
+              <li>
+                Coordinate with architectural, structural and interior design
+                teams.
+              </li>
+              <li>
+                Write progress and inspection reports, and attend coordination
+                meetings with stakeholders and consultants.
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <div class="when">August 2025 – March 2026</div>
+          <div>
+            <h3>Electrical Engineer</h3>
+            <p class="org">Clean Power T&amp;C, Lalitpur</p>
+            <ul>
+              <li>
+                Designed and oversaw electrical installations for commercial and
+                industrial projects, to national electrical codes and IEC/IEEE
+                safety standards.
+              </li>
+              <li>
+                Supervised contractors on electrical distribution systems,
+                monitoring quality and completion dates.
+              </li>
+              <li>
+                Prepared AutoCAD drawings, specifications and technical
+                documentation.
+              </li>
+              <li>
+                Assessed electrical system performance on site and identified
+                improvements.
+              </li>
+              <li>
+                Worked with project managers, contractors and consultants to
+                deliver on schedule and within budget.
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <div class="when">May 2025 – August 2025</div>
+          <div>
+            <h3>High Voltage Testing Engineer (Internship)</h3>
+            <p class="org">Clean Power T&amp;C, Lalitpur</p>
+            <ul>
+              <li>
+                Ran testing and commissioning procedures for transformers,
+                circuit breakers and switchgear up to 132 kV.
+              </li>
+              <li>
+                Performed insulation resistance, turns ratio, winding resistance
+                and dielectric strength tests on power transformers.
+              </li>
+              <li>
+                Carried out circuit breaker timing tests, contact resistance
+                measurements and protection relay calibration.
+              </li>
+              <li>
+                Kept to IEC and IEEE safety protocols, and prepared technical
+                reports for regulatory compliance and handover to operations.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="testing">
+        <h2>High-voltage testing I have performed</h2>
+        <ul class="tests">
+          <li>Insulation resistance</li>
+          <li>Turns ratio</li>
+          <li>Winding resistance</li>
+          <li>Dielectric strength</li>
+          <li>Circuit breaker timing</li>
+          <li>Contact resistance</li>
+          <li>Protection relay calibration</li>
+          <li>Power quality analysis</li>
+        </ul>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="grid">
+          <div class="box">
+            <h3>Software</h3>
+            <p>AutoCAD, ETAP, DIALux, MATLAB</p>
+          </div>
+          <div class="box">
+            <h3>Electrical systems</h3>
+            <p>
+              HV equipment testing, power distribution, earthing design, LV/MV
+              switchgear, lighting design
+            </p>
+          </div>
+          <div class="box">
+            <h3>MEP coordination</h3>
+            <p>
+              Electrical systems, HVAC coordination, fire protection, ELV
+              systems, BMS overview
+            </p>
+          </div>
+          <div class="box">
+            <h3>Testing and commissioning</h3>
+            <p>
+              Transformer testing, circuit breaker timing, insulation
+              resistance, relay calibration, power quality analysis
+            </p>
+          </div>
+          <div class="box">
+            <h3>Standards and codes</h3>
+            <p>
+              IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
+              regulations
+            </p>
+          </div>
+          <div class="box">
+            <h3>Documentation</h3>
+            <p>
+              Shop drawing review, material submittals, method statements,
+              progress reports, technical reports
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="edu">
+        <h2>Education</h2>
+        <h3>
+          Bachelor of Engineering, Electrical and Electronics (Power and
+          Control)
+        </h3>
+        <p>
+          Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.
+        </p>
+      </section>
+    </div>
+
+    <footer id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <div class="contact">
+          <a href="mailto:yadavamrendra083@gmail.com"
+            >yadavamrendra083@gmail.com</a
+          >
+          <a href="tel:+9779844330025">+977-9844330025</a>
+          <span>Kathmandu, Nepal</span>
+        </div>
+        <p class="small">References available on request.</p>
+      </div>
+    </footer>
+  </body>
+</html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amrendra Kumar Yadav — CV</title>
-<style>
-  :root{
-    --primary:#0f3d63;
-    --accent:#1f7a8c;
-    --light:#eef4f8;
-    --text:#2b2b2b;
-    --muted:#6b7280;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{
-    font-family:'Segoe UI', Arial, sans-serif;
-    background:#e5e9ee;
-    color:var(--text);
-    line-height:1.55;
-  }
-  .page{
-    max-width:860px;
-    margin:30px auto;
-    background:#fff;
-    box-shadow:0 6px 24px rgba(0,0,0,.12);
-    display:flex;
-    flex-wrap:wrap;
-  }
-
-  /* ===== Header ===== */
-  header{
-    width:100%;
-    background:linear-gradient(135deg,var(--primary),var(--accent));
-    color:#fff;
-    padding:38px 44px 30px;
-  }
-  header h1{
-    font-size:2rem;
-    letter-spacing:1px;
-    margin-bottom:4px;
-  }
-  .tagline{
-    font-size:1rem;
-    opacity:.95;
-    margin-bottom:14px;
-  }
-  .contact{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px 22px;
-    font-size:.85rem;
-  }
-  .contact span{display:inline-flex;align-items:center;gap:6px;}
-  .contact a{color:#fff;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.6);}
-
-  /* ===== Layout ===== */
-  aside{
-    flex:1 1 260px;
-    background:var(--light);
-    padding:30px 26px;
-  }
-  main{
-    flex:2 1 480px;
-    padding:30px 34px 40px;
-  }
-
-  /* ===== Sections ===== */
-  h2{
-    font-size:.82rem;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    color:var(--primary);
-    border-bottom:2px solid var(--accent);
-    display:inline-block;
-    padding-bottom:4px;
-    margin-bottom:14px;
-  }
-  section{margin-bottom:28px;}
-
-  /* ===== Sidebar ===== */
-  aside h2{width:100%;}
-  .skill-group{margin-bottom:14px;}
-  .skill-group h3{
-    font-size:.85rem;
-    color:var(--text);
-    margin-bottom:5px;
-  }
-  .skill-group p{
-    font-size:.82rem;
-    color:var(--muted);
-  }
-  .edu h3{font-size:.9rem;margin-bottom:2px;}
-  .edu p{font-size:.83rem;color:var(--muted);margin-bottom:10px;}
-  .ref{
-    font-size:.8rem;
-    margin-bottom:12px;
-    color:var(--muted);
-  }
-  .ref strong{color:var(--text);}
-
-  /* ===== Experience ===== */
-  .job{margin-bottom:20px;}
-  .job-head{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    align-items:baseline;
-    gap:4px;
-  }
-  .job-head h3{font-size:.98rem;color:var(--text);}
-  .job-head h3 em{color:var(--accent);font-style:normal;}
-  .date{
-    font-size:.75rem;
-    background:var(--light);
-    color:var(--primary);
-    padding:2px 10px;
-    border-radius:12px;
-    font-weight:600;
-  }
-  .job ul{margin:8px 0 0 18px;font-size:.85rem;color:var(--muted);}
-  .job li{margin-bottom:5px;}
-
-  /* Summary */
-  .summary{font-size:.9rem;color:#3d4451;}
-
-  @media print{
-    body{background:#fff;}
-    .page{box-shadow:none;margin:0;max-width:100%;}
-  }
-</style>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>Amrendra Kumar Yadav – MEP &amp; Electrical Power Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #eef2f5;
+      --surface: #ffffff;
+      --ink: #14293d;
+      --muted: #51647a;
+      --line: #c9d4de;
+      --accent: #1c4fd6;
+      --hot: #e8a800;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0e1824;
+        --surface: #15243436;
+        --ink: #e6edf4;
+        --muted: #9fb0c2;
+        --line: #2a3d52;
+        --accent: #7ea2ff;
+        --hot: #ffc531;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0e1824;
+      --surface: #15243436;
+      --ink: #e6edf4;
+      --muted: #9fb0c2;
+      --line: #2a3d52;
+      --accent: #7ea2ff;
+      --hot: #ffc531;
+      color-scheme: dark;
+    }
+    html {
+      scroll-padding-top: env(safe-area-inset-top, 0px);
+      scroll-behavior: smooth;
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font:
+        17px/1.65 "IBM Plex Sans",
+        system-ui,
+        sans-serif;
+    }
+    h1,
+    h2,
+    h3 {
+      font-family: "Bricolage Grotesque", "IBM Plex Sans", sans-serif;
+      line-height: 1.1;
+      margin: 0;
+    }
+    a {
+      color: var(--accent);
+    }
+    :focus-visible {
+      outline: 3px solid var(--hot);
+      outline-offset: 3px;
+    }
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: var(--ink);
+    }
+    .hero {
+      padding: 48px 0 56px;
+    }
+    .hero h1 {
+      font-size: clamp(2.6rem, 8vw, 5.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      max-width: 12ch;
+    }
+    .hero p.role {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: clamp(1.2rem, 3vw, 1.7rem);
+      font-weight: 500;
+      color: var(--accent);
+      margin: 18px 0 0;
+    }
+    .hero p.lede {
+      max-width: 60ch;
+      color: var(--muted);
+      margin: 18px 0 28px;
+    }
+    .btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 6px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 2px solid var(--ink);
+      color: var(--ink);
+    }
+    .btn.main {
+      background: var(--ink);
+      color: var(--bg);
+    }
+    /* single-line diagram: the one memorable element */
+    .sld {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 44px;
+      color: var(--ink);
+    }
+    .sld .w {
+      stroke: currentColor;
+      stroke-width: 2.5;
+      fill: none;
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+      animation: draw 2.4s ease-out 0.2s forwards;
+    }
+    .sld .p {
+      fill: var(--hot);
+      opacity: 0;
+      animation: on 0.4s ease-out 2.3s forwards;
+    }
+    .sld text {
+      font:
+        500 13px "IBM Plex Sans",
+        sans-serif;
+      fill: var(--muted);
+    }
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes on {
+      to {
+        opacity: 1;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sld .w {
+        animation: none;
+        stroke-dashoffset: 0;
+      }
+      .sld .p {
+        animation: none;
+        opacity: 1;
+      }
+      html {
+        scroll-behavior: auto;
+      }
+    }
+    section {
+      padding: 56px 0;
+      border-top: 1px solid var(--line);
+    }
+    h2 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
+    .job {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 12px 32px;
+      padding: 0 0 36px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid var(--line);
+    }
+    .job:last-child {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+    .job .when {
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .job h3 {
+      font-size: 1.35rem;
+      margin-bottom: 2px;
+    }
+    .job .org {
+      color: var(--accent);
+      font-weight: 500;
+      margin: 0 0 12px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 1.1em;
+    }
+    li {
+      margin: 0 0 8px;
+      max-width: 68ch;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 22px;
+    }
+    .box h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    .box p,
+    .box ul {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .tests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .tests li {
+      margin: 0;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--hot);
+      border-radius: 4px;
+      background: var(--surface);
+      max-width: none;
+      font-size: 15px;
+    }
+    .edu h3 {
+      font-size: 1.3rem;
+    }
+    .edu p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+    footer {
+      padding: 56px 0 64px;
+      border-top: 1px solid var(--line);
+    }
+    footer h2 {
+      margin-bottom: 14px;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 32px;
+      font-size: 1.1rem;
+    }
+    .small {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 36px;
+    }
+    @media (max-width: 700px) {
+      .job {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="page">
+  <div class="wrap">
+    <nav aria-label="Sections">
+      <a href="#about">About</a><a href="#experience">Experience</a
+      ><a href="#testing">Testing</a><a href="#skills">Skills</a
+      ><a href="#education">Education</a><a href="#contact">Contact</a>
+    </nav>
 
-  <header>
-    <h1>AMRENDRA KUMAR YADAV</h1>
-    <p class="tagline">MEP Engineer | Electrical &amp; Power Systems</p>
-    <div class="contact">
-      <span>📍 Kathmandu, Nepal</span>
-      <span>✉️ <a href="mailto:yadavamrendra083@gmail.com">yadavamrendra083@gmail.com</a></span>
-      <span>📞 <a href="tel:+9779844330025">+977-9844330025</a></span>
-      <span>🔗 <a href="#">LinkedIn Profile</a></span>
+    <header class="hero" id="about">
+      <h1>Amrendra Kumar Yadav</h1>
+      <p class="role">MEP engineer, electrical and power systems</p>
+      <p class="lede">
+        Electrical and Electronics Engineer in Kathmandu working across MEP
+        coordination, high-voltage equipment testing, commissioning and
+        electrical system design, on commercial and industrial projects. I work
+        with architects, structural engineers, contractors and consultants to
+        deliver on schedule and within budget.
+      </p>
+      <div class="btns">
+        <a class="btn main" href="mailto:yadavamrendra083@gmail.com">Email me</a
+        ><a class="btn" href="#experience">See my experience</a>
+      </div>
+
+      <svg
+        class="sld"
+        viewBox="0 0 900 150"
+        role="img"
+        aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
+      >
+        <path
+          class="w"
+          d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
+        ></path>
+        <circle class="w" cx="170" cy="60" r="20"></circle>
+        <circle class="w" cx="320" cy="60" r="20"></circle>
+        <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
+        <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
+        <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
+        <text x="20" y="40">132 kV</text>
+        <text x="140" y="108">Transformer</text>
+        <text x="290" y="108">Transformer</text>
+        <text x="440" y="142">LV/MV switchgear</text>
+        <text x="570" y="142">Distribution</text>
+        <text x="725" y="142">Earthing</text>
+      </svg>
+    </header>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <article class="job">
+        <div class="when">March 2026 – present</div>
+        <div>
+          <h3>Electrical Engineer</h3>
+          <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
+          <ul>
+            <li>
+              Coordinate and supervise MEP installation: electrical, HVAC,
+              plumbing, fire protection and ELV systems, to design
+              specifications and international standards.
+            </li>
+            <li>
+              Review shop drawings, material submittals and method statements
+              across active sites.
+            </li>
+            <li>
+              Inspect sites and resolve technical issues during installation to
+              hold quality and timelines.
+            </li>
+            <li>
+              Coordinate with architectural, structural and interior design
+              teams.
+            </li>
+            <li>
+              Write progress and inspection reports, and attend coordination
+              meetings with stakeholders and consultants.
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">August 2025 – March 2026</div>
+        <div>
+          <h3>Electrical Engineer</h3>
+          <p class="org">Clean Power T&amp;C, Lalitpur</p>
+          <ul>
+            <li>
+              Designed and oversaw electrical installations for commercial and
+              industrial projects, to national electrical codes and IEC/IEEE
+              safety standards.
+            </li>
+            <li>
+              Supervised contractors on electrical distribution systems,
+              monitoring quality and completion dates.
+            </li>
+            <li>
+              Prepared AutoCAD drawings, specifications and technical
+              documentation.
+            </li>
+            <li>
+              Assessed electrical system performance on site and identified
+              improvements.
+            </li>
+            <li>
+              Worked with project managers, contractors and consultants to
+              deliver on schedule and within budget.
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">May 2025 – August 2025</div>
+        <div>
+          <h3>High Voltage Testing Engineer (Internship)</h3>
+          <p class="org">Clean Power T&amp;C, Lalitpur</p>
+          <ul>
+            <li>
+              Ran testing and commissioning procedures for transformers, circuit
+              breakers and switchgear up to 132 kV.
+            </li>
+            <li>
+              Performed insulation resistance, turns ratio, winding resistance
+              and dielectric strength tests on power transformers.
+            </li>
+            <li>
+              Carried out circuit breaker timing tests, contact resistance
+              measurements and protection relay calibration.
+            </li>
+            <li>
+              Kept to IEC and IEEE safety protocols, and prepared technical
+              reports for regulatory compliance and handover to operations.
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="testing">
+      <h2>High-voltage testing I have performed</h2>
+      <ul class="tests">
+        <li>Insulation resistance</li>
+        <li>Turns ratio</li>
+        <li>Winding resistance</li>
+        <li>Dielectric strength</li>
+        <li>Circuit breaker timing</li>
+        <li>Contact resistance</li>
+        <li>Protection relay calibration</li>
+        <li>Power quality analysis</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="box">
+          <h3>Software</h3>
+          <p>AutoCAD, ETAP, DIALux, MATLAB</p>
+        </div>
+        <div class="box">
+          <h3>Electrical systems</h3>
+          <p>
+            HV equipment testing, power distribution, earthing design, LV/MV
+            switchgear, lighting design
+          </p>
+        </div>
+        <div class="box">
+          <h3>MEP coordination</h3>
+          <p>
+            Electrical systems, HVAC coordination, fire protection, ELV systems,
+            BMS overview
+          </p>
+        </div>
+        <div class="box">
+          <h3>Testing and commissioning</h3>
+          <p>
+            Transformer testing, circuit breaker timing, insulation resistance,
+            relay calibration, power quality analysis
+          </p>
+        </div>
+        <div class="box">
+          <h3>Standards and codes</h3>
+          <p>
+            IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
+            regulations
+          </p>
+        </div>
+        <div class="box">
+          <h3>Documentation</h3>
+          <p>
+            Shop drawing review, material submittals, method statements,
+            progress reports, technical reports
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="edu">
+      <h2>Education</h2>
+      <h3>
+        Bachelor of Engineering, Electrical and Electronics (Power and Control)
+      </h3>
+      <p>Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.</p>
+    </section>
+  </div>
+
+  <footer id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <div class="contact">
+        <a href="mailto:yadavamrendra083@gmail.com"
+          >yadavamrendra083@gmail.com</a
+        >
+        <a href="tel:+9779844330025">+977-9844330025</a>
+        <span>Kathmandu, Nepal</span>
+      </div>
+      <p class="small">References available on request.</p>
     </div>
+  </footer>
+</body>
+<div class="wrap">
+  <nav aria-label="Sections">
+    <a href="#about">About</a><a href="#experience">Experience</a
+    ><a href="#testing">Testing</a><a href="#skills">Skills</a
+    ><a href="#education">Education</a><a href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero" id="about">
+    <h1>Amrendra Kumar Yadav</h1>
+    <p class="role">MEP engineer, electrical and power systems</p>
+    <p class="lede">
+      Electrical and Electronics Engineer in Kathmandu working across MEP
+      coordination, high-voltage equipment testing, commissioning and electrical
+      system design, on commercial and industrial projects. I work with
+      architects, structural engineers, contractors and consultants to deliver
+      on schedule and within budget.
+    </p>
+    <div class="btns">
+      <a class="btn main" href="mailto:yadavamrendra083@gmail.com">Email me</a
+      ><a class="btn" href="#experience">See my experience</a>
+    </div>
+
+    <svg
+      class="sld"
+      viewBox="0 0 900 150"
+      role="img"
+      aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
+    >
+      <path
+        class="w"
+        d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
+      ></path>
+      <circle class="w" cx="170" cy="60" r="20"></circle>
+      <circle class="w" cx="320" cy="60" r="20"></circle>
+      <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
+      <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
+      <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
+      <text x="20" y="40">132 kV</text>
+      <text x="140" y="108">Transformer</text>
+      <text x="290" y="108">Transformer</text>
+      <text x="440" y="142">LV/MV switchgear</text>
+      <text x="570" y="142">Distribution</text>
+      <text x="725" y="142">Earthing</text>
+    </svg>
   </header>
 
-  <aside>
-    <section>
-      <h2>Technical Skills</h2>
-      <div class="skill-group"><h3>MEP / Engineering Software</h3><p>AutoCAD, ETAP, DIALux</p></div>
-      <div class="skill-group"><h3>Electrical Systems</h3><p>HV equipment testing, power distribution, earthing design, LV/MV switchgear, lighting design</p></div>
-      <div class="skill-group"><h3>MEP Coordination</h3><p>Electrical systems, HVAC coordination, fire protection, ELV systems, site overview</p></div>
-      <div class="skill-group"><h3>Testing &amp; Commissioning</h3><p>Transformer testing, circuit breaker timing, insulation resistance, relay calibration, power quality analysis</p></div>
-      <div class="skill-group"><h3>Standards &amp; Codes</h3><p>IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety regulations</p></div>
-      <div class="skill-group"><h3>Documentation</h3><p>Shop drawing review, material submittals, method statements, progress reports, technical reports</p></div>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <div class="edu">
-        <h3>Bachelor of Engineering – Electrical &amp; Electronics (Power and Control)</h3>
-        <p>Kathmandu University, Dhulikhel, Nepal<br>Dec 2020 – Jun 2025</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>References</h2>
-      <div class="ref">
-        <strong>Rohan Parajuli</strong><br>
-        Electrical Engineer, Clean Power Pvt. Ltd.<br>
-        📞 +977-9701776103<br>
-        ✉️ rohanparajuli100@gmail.com
-      </div>
-      <div class="ref">
-        <strong>Suraj Shrestha</strong><br>
-        Electrical Engineer, Clean Power Pvt. Ltd.<br>
-        📞 +977-9843812611<br>
-        ✉️ xuraj000@gmail.com
-      </div>
-    </section>
-  </aside>
-
-  <main>
-    <section>
-      <h2>Professional Summary</h2>
-      <p class="summary">
-        Results-driven Electrical and Electronics Engineer with hands-on experience in MEP coordination,
-        high-voltage equipment testing, commissioning, and electrical system design. Currently contributing
-        to MEP installations at Delight M and E Pvt. Ltd, with prior experience at Clean Power T&amp;C across
-        commercial and industrial projects. Skilled in AutoCAD, ETAP, and DIALux with strong expertise in
-        power distribution, earthing design, protection systems, and T&amp;C of electrical and mechanical plant.
-        Adept at cross-functional coordination with architects, structural engineers, contractors, and
-        consultants to deliver projects on schedule and within budget.
-      </p>
-    </section>
-
-    <section>
-      <h2>Professional Experience</h2>
-
-      <div class="job">
-        <div class="job-head">
-          <h3>Electrical Engineer — <em>Delight M and E Pvt. Ltd, Kathmandu</em></h3>
-          <span class="date">Mar 2026 – Present</span>
-        </div>
+  <section id="experience">
+    <h2>Experience</h2>
+    <article class="job">
+      <div class="when">March 2026 – present</div>
+      <div>
+        <h3>Electrical Engineer</h3>
+        <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
         <ul>
-          <li>Coordinate and supervise MEP installation works including electrical systems, HVAC, plumbing, fire protection, and ELV systems, ensuring compliance with design specifications and international standards.</li>
-          <li>Review shop drawings, material submittals, and method statements for MEP works across active project sites.</li>
-          <li>Conduct site inspections and resolve technical issues during installation, ensuring quality benchmarks and project timelines are met.</li>
-          <li>Coordinate MEP works with architectural, structural, and interior design teams for smooth multi-discipline project execution.</li>
-          <li>Prepare progress reports, site inspection reports, and technical documentation; attend coordination meetings with project stakeholders.</li>
+          <li>
+            Coordinate and supervise MEP installation: electrical, HVAC,
+            plumbing, fire protection and ELV systems, to design specifications
+            and international standards.
+          </li>
+          <li>
+            Review shop drawings, material submittals and method statements
+            across active sites.
+          </li>
+          <li>
+            Inspect sites and resolve technical issues during installation to
+            hold quality and timelines.
+          </li>
+          <li>
+            Coordinate with architectural, structural and interior design teams.
+          </li>
+          <li>
+            Write progress and inspection reports, and attend coordination
+            meetings with stakeholders and consultants.
+          </li>
         </ul>
       </div>
-
-      <div class="job">
-        <div class="job-head">
-          <h3>Electrical Engineer — <em>Clean Power T&amp;C, Lalitpur, Nepal</em></h3>
-          <span class="date">Aug 2025 – Mar 2026</span>
-        </div>
+    </article>
+    <article class="job">
+      <div class="when">August 2025 – March 2026</div>
+      <div>
+        <h3>Electrical Engineer</h3>
+        <p class="org">Clean Power T&amp;C, Lalitpur</p>
         <ul>
-          <li>Designed and oversaw electrical installations for commercial and industrial projects, ensuring compliance with national electrical codes and IEC/IEEE safety standards.</li>
-          <li>Supervised contractor activities for electrical distribution systems, monitoring quality and timely completion of installation works.</li>
-          <li>Prepared detailed AutoCAD drawings, specifications, and technical documentation for electrical distribution systems.</li>
-          <li>Conducted site inspections and technical assessments to evaluate electrical system performance and identify improvement opportunities.</li>
-          <li>Collaborated with project managers, contractors, and consultants to deliver projects on schedule and within budget.</li>
+          <li>
+            Designed and oversaw electrical installations for commercial and
+            industrial projects, to national electrical codes and IEC/IEEE
+            safety standards.
+          </li>
+          <li>
+            Supervised contractors on electrical distribution systems,
+            monitoring quality and completion dates.
+          </li>
+          <li>
+            Prepared AutoCAD drawings, specifications and technical
+            documentation.
+          </li>
+          <li>
+            Assessed electrical system performance on site and identified
+            improvements.
+          </li>
+          <li>
+            Worked with project managers, contractors and consultants to deliver
+            on schedule and within budget.
+          </li>
         </ul>
       </div>
-
-      <div class="job">
-        <div class="job-head">
-          <h3>High Voltage Testing Engineer (Internship) — <em>Clean Power T&amp;C, Lalitpur, Nepal</em></h3>
-          <span class="date">May 2025 – Aug 2025</span>
-        </div>
+    </article>
+    <article class="job">
+      <div class="when">May 2025 – August 2025</div>
+      <div>
+        <h3>High Voltage Testing Engineer (Internship)</h3>
+        <p class="org">Clean Power T&amp;C, Lalitpur</p>
         <ul>
-          <li>Executed comprehensive T&amp;C procedures for high-voltage equipment including transformers, circuit breakers, and switchgear up to 132 kV.</li>
-          <li>Performed insulation resistance, turns ratio, winding resistance, and dielectric strength tests on power transformers.</li>
-          <li>Conducted circuit breaker timing tests, contact resistance measurements, and protection relay calibration to ensure optimal equipment performance.</li>
-          <li>Monitored T&amp;C activities and ensured strict adherence to IEC and IEEE safety protocols; prepared detailed technical reports for regulatory compliance and handover to operations.</li>
+          <li>
+            Ran testing and commissioning procedures for transformers, circuit
+            breakers and switchgear up to 132 kV.
+          </li>
+          <li>
+            Performed insulation resistance, turns ratio, winding resistance and
+            dielectric strength tests on power transformers.
+          </li>
+          <li>
+            Carried out circuit breaker timing tests, contact resistance
+            measurements and protection relay calibration.
+          </li>
+          <li>
+            Kept to IEC and IEEE safety protocols, and prepared technical
+            reports for regulatory compliance and handover to operations.
+          </li>
         </ul>
       </div>
-    </section>
-  </main>
+    </article>
+  </section>
 
+  <section id="testing">
+    <h2>High-voltage testing I have performed</h2>
+    <ul class="tests">
+      <li>Insulation resistance</li>
+      <li>Turns ratio</li>
+      <li>Winding resistance</li>
+      <li>Dielectric strength</li>
+      <li>Circuit breaker timing</li>
+      <li>Contact resistance</li>
+      <li>Protection relay calibration</li>
+      <li>Power quality analysis</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="box">
+        <h3>Software</h3>
+        <p>AutoCAD, ETAP, DIALux, MATLAB</p>
+      </div>
+      <div class="box">
+        <h3>Electrical systems</h3>
+        <p>
+          HV equipment testing, power distribution, earthing design, LV/MV
+          switchgear, lighting design
+        </p>
+      </div>
+      <div class="box">
+        <h3>MEP coordination</h3>
+        <p>
+          Electrical systems, HVAC coordination, fire protection, ELV systems,
+          BMS overview
+        </p>
+      </div>
+      <div class="box">
+        <h3>Testing and commissioning</h3>
+        <p>
+          Transformer testing, circuit breaker timing, insulation resistance,
+          relay calibration, power quality analysis
+        </p>
+      </div>
+      <div class="box">
+        <h3>Standards and codes</h3>
+        <p>
+          IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
+          regulations
+        </p>
+      </div>
+      <div class="box">
+        <h3>Documentation</h3>
+        <p>
+          Shop drawing review, material submittals, method statements, progress
+          reports, technical reports
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="edu">
+    <h2>Education</h2>
+    <h3>
+      Bachelor of Engineering, Electrical and Electronics (Power and Control)
+    </h3>
+    <p>Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.</p>
+  </section>
 </div>
+<nav aria-label="Sections">
+  <a href="#about">About</a><a href="#experience">Experience</a
+  ><a href="#testing">Testing</a><a href="#skills">Skills</a
+  ><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+<header class="hero" id="about">
+  <h1>Amrendra Kumar Yadav</h1>
+  <p class="role">MEP engineer, electrical and power systems</p>
+  <p class="lede">
+    Electrical and Electronics Engineer in Kathmandu working across MEP
+    coordination, high-voltage equipment testing, commissioning and electrical
+    system design, on commercial and industrial projects. I work with
+    architects, structural engineers, contractors and consultants to deliver on
+    schedule and within budget.
+  </p>
+  <div class="btns">
+    <a class="btn main" href="mailto:yadavamrendra083@gmail.com">Email me</a
+    ><a class="btn" href="#experience">See my experience</a>
+  </div>
+
+  <svg
+    class="sld"
+    viewBox="0 0 900 150"
+    role="img"
+    aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
+  >
+    <path
+      class="w"
+      d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
+    ></path>
+    <circle class="w" cx="170" cy="60" r="20"></circle>
+    <circle class="w" cx="320" cy="60" r="20"></circle>
+    <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
+    <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
+    <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
+    <text x="20" y="40">132 kV</text>
+    <text x="140" y="108">Transformer</text>
+    <text x="290" y="108">Transformer</text>
+    <text x="440" y="142">LV/MV switchgear</text>
+    <text x="570" y="142">Distribution</text>
+    <text x="725" y="142">Earthing</text>
+  </svg>
+</header>
+<section id="experience">
+  <h2>Experience</h2>
+  <article class="job">
+    <div class="when">March 2026 – present</div>
+    <div>
+      <h3>Electrical Engineer</h3>
+      <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
+      <ul>
+        <li>
+          Coordinate and supervise MEP installation: electrical, HVAC, plumbing,
+          fire protection and ELV systems, to design specifications and
+          international standards.
+        </li>
+        <li>
+          Review shop drawings, material submittals and method statements across
+          active sites.
+        </li>
+        <li>
+          Inspect sites and resolve technical issues during installation to hold
+          quality and timelines.
+        </li>
+        <li>
+          Coordinate with architectural, structural and interior design teams.
+        </li>
+        <li>
+          Write progress and inspection reports, and attend coordination
+          meetings with stakeholders and consultants.
+        </li>
+      </ul>
+    </div>
+  </article>
+  <article class="job">
+    <div class="when">August 2025 – March 2026</div>
+    <div>
+      <h3>Electrical Engineer</h3>
+      <p class="org">Clean Power T&amp;C, Lalitpur</p>
+      <ul>
+        <li>
+          Designed and oversaw electrical installations for commercial and
+          industrial projects, to national electrical codes and IEC/IEEE safety
+          standards.
+        </li>
+        <li>
+          Supervised contractors on electrical distribution systems, monitoring
+          quality and completion dates.
+        </li>
+        <li>
+          Prepared AutoCAD drawings, specifications and technical documentation.
+        </li>
+        <li>
+          Assessed electrical system performance on site and identified
+          improvements.
+        </li>
+        <li>
+          Worked with project managers, contractors and consultants to deliver
+          on schedule and within budget.
+        </li>
+      </ul>
+    </div>
+  </article>
+  <article class="job">
+    <div class="when">May 2025 – August 2025</div>
+    <div>
+      <h3>High Voltage Testing Engineer (Internship)</h3>
+      <p class="org">Clean Power T&amp;C, Lalitpur</p>
+      <ul>
+        <li>
+          Ran testing and commissioning procedures for transformers, circuit
+          breakers and switchgear up to 132 kV.
+        </li>
+        <li>
+          Performed insulation resistance, turns ratio, winding resistance and
+          dielectric strength tests on power transformers.
+        </li>
+        <li>
+          Carried out circuit breaker timing tests, contact resistance
+          measurements and protection relay calibration.
+        </li>
+        <li>
+          Kept to IEC and IEEE safety protocols, and prepared technical reports
+          for regulatory compliance and handover to operations.
+        </li>
+      </ul>
+    </div>
+  </article>
+</section>
+<section id="testing">
+  <h2>High-voltage testing I have performed</h2>
+  <ul class="tests">
+    <li>Insulation resistance</li>
+    <li>Turns ratio</li>
+    <li>Winding resistance</li>
+    <li>Dielectric strength</li>
+    <li>Circuit breaker timing</li>
+    <li>Contact resistance</li>
+    <li>Protection relay calibration</li>
+    <li>Power quality analysis</li>
+  </ul>
+</section>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="box">
+      <h3>Software</h3>
+      <p>AutoCAD, ETAP, DIALux, MATLAB</p>
+    </div>
+    <div class="box">
+      <h3>Electrical systems</h3>
+      <p>
+        HV equipment testing, power distribution, earthing design, LV/MV
+        switchgear, lighting design
+      </p>
+    </div>
+    <div class="box">
+      <h3>MEP coordination</h3>
+      <p>
+        Electrical systems, HVAC coordination, fire protection, ELV systems, BMS
+        overview
+      </p>
+    </div>
+    <div class="box">
+      <h3>Testing and commissioning</h3>
+      <p>
+        Transformer testing, circuit breaker timing, insulation resistance,
+        relay calibration, power quality analysis
+      </p>
+    </div>
+    <div class="box">
+      <h3>Standards and codes</h3>
+      <p>
+        IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
+        regulations
+      </p>
+    </div>
+    <div class="box">
+      <h3>Documentation</h3>
+      <p>
+        Shop drawing review, material submittals, method statements, progress
+        reports, technical reports
+      </p>
+    </div>
+  </div>
+</section>
+<section id="education" class="edu">
+  <h2>Education</h2>
+  <h3>
+    Bachelor of Engineering, Electrical and Electronics (Power and Control)
+  </h3>
+  <p>Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.</p>
+</section>
+<div class="wrap">
+  <nav aria-label="Sections">
+    <a href="#about">About</a><a href="#experience">Experience</a
+    ><a href="#testing">Testing</a><a href="#skills">Skills</a
+    ><a href="#education">Education</a><a href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero" id="about">
+    <h1>Amrendra Kumar Yadav</h1>
+    <p class="role">MEP engineer, electrical and power systems</p>
+    <p class="lede">
+      Electrical and Electronics Engineer in Kathmandu working across MEP
+      coordination, high-voltage equipment testing, commissioning and electrical
+      system design, on commercial and industrial projects. I work with
+      architects, structural engineers, contractors and consultants to deliver
+      on schedule and within budget.
+    </p>
+    <div class="btns">
+      <a class="btn main" href="mailto:yadavamrendra083@gmail.com">Email me</a
+      ><a class="btn" href="#experience">See my experience</a>
+    </div>
+
+    <svg
+      class="sld"
+      viewBox="0 0 900 150"
+      role="img"
+      aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
+    >
+      <path
+        class="w"
+        d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
+      ></path>
+      <circle class="w" cx="170" cy="60" r="20"></circle>
+      <circle class="w" cx="320" cy="60" r="20"></circle>
+      <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
+      <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
+      <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
+      <text x="20" y="40">132 kV</text>
+      <text x="140" y="108">Transformer</text>
+      <text x="290" y="108">Transformer</text>
+      <text x="440" y="142">LV/MV switchgear</text>
+      <text x="570" y="142">Distribution</text>
+      <text x="725" y="142">Earthing</text>
+    </svg>
+  </header>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <article class="job">
+      <div class="when">March 2026 – present</div>
+      <div>
+        <h3>Electrical Engineer</h3>
+        <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
+        <ul>
+          <li>
+            Coordinate and supervise MEP installation: electrical, HVAC,
+            plumbing, fire protection and ELV systems, to design specifications
+            and international standards.
+          </li>
+          <li>
+            Review shop drawings, material submittals and method statements
+            across active sites.
+          </li>
+          <li>
+            Inspect sites and resolve technical issues during installation to
+            hold quality and timelines.
+          </li>
+          <li>
+            Coordinate with architectural, structural and interior design teams.
+          </li>
+          <li>
+            Write progress and inspection reports, and attend coordination
+            meetings with stakeholders and consultants.
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="job">
+      <div class="when">August 2025 – March 2026</div>
+      <div>
+        <h3>Electrical Engineer</h3>
+        <p class="org">Clean Power T&amp;C, Lalitpur</p>
+        <ul>
+          <li>
+            Designed and oversaw electrical installations for commercial and
+            industrial projects, to national electrical codes and IEC/IEEE
+            safety standards.
+          </li>
+          <li>
+            Supervised contractors on electrical distribution systems,
+            monitoring quality and completion dates.
+          </li>
+          <li>
+            Prepared AutoCAD drawings, specifications and technical
+            documentation.
+          </li>
+          <li>
+            Assessed electrical system performance on site and identified
+            improvements.
+          </li>
+          <li>
+            Worked with project managers, contractors and consultants to deliver
+            on schedule and within budget.
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="job">
+      <div class="when">May 2025 – August 2025</div>
+      <div>
+        <h3>High Voltage Testing Engineer (Internship)</h3>
+        <p class="org">Clean Power T&amp;C, Lalitpur</p>
+        <ul>
+          <li>
+            Ran testing and commissioning procedures for transformers, circuit
+            breakers and switchgear up to 132 kV.
+          </li>
+          <li>
+            Performed insulation resistance, turns ratio, winding resistance and
+            dielectric strength tests on power transformers.
+          </li>
+          <li>
+            Carried out circuit breaker timing tests, contact resistance
+            measurements and protection relay calibration.
+          </li>
+          <li>
+            Kept to IEC and IEEE safety protocols, and prepared technical
+            reports for regulatory compliance and handover to operations.
+          </li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section id="testing">
+    <h2>High-voltage testing I have performed</h2>
+    <ul class="tests">
+      <li>Insulation resistance</li>
+      <li>Turns ratio</li>
+      <li>Winding resistance</li>
+      <li>Dielectric strength</li>
+      <li>Circuit breaker timing</li>
+      <li>Contact resistance</li>
+      <li>Protection relay calibration</li>
+      <li>Power quality analysis</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="box">
+        <h3>Software</h3>
+        <p>AutoCAD, ETAP, DIALux, MATLAB</p>
+      </div>
+      <div class="box">
+        <h3>Electrical systems</h3>
+        <p>
+          HV equipment testing, power distribution, earthing design, LV/MV
+          switchgear, lighting design
+        </p>
+      </div>
+      <div class="box">
+        <h3>MEP coordination</h3>
+        <p>
+          Electrical systems, HVAC coordination, fire protection, ELV systems,
+          BMS overview
+        </p>
+      </div>
+      <div class="box">
+        <h3>Testing and commissioning</h3>
+        <p>
+          Transformer testing, circuit breaker timing, insulation resistance,
+          relay calibration, power quality analysis
+        </p>
+      </div>
+      <div class="box">
+        <h3>Standards and codes</h3>
+        <p>
+          IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
+          regulations
+        </p>
+      </div>
+      <div class="box">
+        <h3>Documentation</h3>
+        <p>
+          Shop drawing review, material submittals, method statements, progress
+          reports, technical reports
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="edu">
+    <h2>Education</h2>
+    <h3>
+      Bachelor of Engineering, Electrical and Electronics (Power and Control)
+    </h3>
+    <p>Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.</p>
+  </section>
+</div>
+<footer id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:yadavamrendra083@gmail.com">yadavamrendra083@gmail.com</a>
+      <a href="tel:+9779844330025">+977-9844330025</a>
+      <span>Kathmandu, Nepal</span>
+    </div>
+    <p class="small">References available on request.</p>
+  </div>
+</footer>
+<body>
+  <div class="wrap">
+    <nav aria-label="Sections">
+      <a href="#about">About</a><a href="#experience">Experience</a
+      ><a href="#testing">Testing</a><a href="#skills">Skills</a
+      ><a href="#education">Education</a><a href="#contact">Contact</a>
+    </nav>
+
+    <header class="hero" id="about">
+      <h1>Amrendra Kumar Yadav</h1>
+      <p class="role">MEP engineer, electrical and power systems</p>
+      <p class="lede">
+        Electrical and Electronics Engineer in Kathmandu working across MEP
+        coordination, high-voltage equipment testing, commissioning and
+        electrical system design, on commercial and industrial projects. I work
+        with architects, structural engineers, contractors and consultants to
+        deliver on schedule and within budget.
+      </p>
+      <div class="btns">
+        <a class="btn main" href="mailto:yadavamrendra083@gmail.com">Email me</a
+        ><a class="btn" href="#experience">See my experience</a>
+      </div>
+
+      <svg
+        class="sld"
+        viewBox="0 0 900 150"
+        role="img"
+        aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
+      >
+        <path
+          class="w"
+          d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
+        ></path>
+        <circle class="w" cx="170" cy="60" r="20"></circle>
+        <circle class="w" cx="320" cy="60" r="20"></circle>
+        <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
+        <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
+        <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
+        <text x="20" y="40">132 kV</text>
+        <text x="140" y="108">Transformer</text>
+        <text x="290" y="108">Transformer</text>
+        <text x="440" y="142">LV/MV switchgear</text>
+        <text x="570" y="142">Distribution</text>
+        <text x="725" y="142">Earthing</text>
+      </svg>
+    </header>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <article class="job">
+        <div class="when">March 2026 – present</div>
+        <div>
+          <h3>Electrical Engineer</h3>
+          <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
+          <ul>
+            <li>
+              Coordinate and supervise MEP installation: electrical, HVAC,
+              plumbing, fire protection and ELV systems, to design
+              specifications and international standards.
+            </li>
+            <li>
+              Review shop drawings, material submittals and method statements
+              across active sites.
+            </li>
+            <li>
+              Inspect sites and resolve technical issues during installation to
+              hold quality and timelines.
+            </li>
+            <li>
+              Coordinate with architectural, structural and interior design
+              teams.
+            </li>
+            <li>
+              Write progress and inspection reports, and attend coordination
+              meetings with stakeholders and consultants.
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">August 2025 – March 2026</div>
+        <div>
+          <h3>Electrical Engineer</h3>
+          <p class="org">Clean Power T&amp;C, Lalitpur</p>
+          <ul>
+            <li>
+              Designed and oversaw electrical installations for commercial and
+              industrial projects, to national electrical codes and IEC/IEEE
+              safety standards.
+            </li>
+            <li>
+              Supervised contractors on electrical distribution systems,
+              monitoring quality and completion dates.
+            </li>
+            <li>
+              Prepared AutoCAD drawings, specifications and technical
+              documentation.
+            </li>
+            <li>
+              Assessed electrical system performance on site and identified
+              improvements.
+            </li>
+            <li>
+              Worked with project managers, contractors and consultants to
+              deliver on schedule and within budget.
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="job">
+        <div class="when">May 2025 – August 2025</div>
+        <div>
+          <h3>High Voltage Testing Engineer (Internship)</h3>
+          <p class="org">Clean Power T&amp;C, Lalitpur</p>
+          <ul>
+            <li>
+              Ran testing and commissioning procedures for transformers, circuit
+              breakers and switchgear up to 132 kV.
+            </li>
+            <li>
+              Performed insulation resistance, turns ratio, winding resistance
+              and dielectric strength tests on power transformers.
+            </li>
+            <li>
+              Carried out circuit breaker timing tests, contact resistance
+              measurements and protection relay calibration.
+            </li>
+            <li>
+              Kept to IEC and IEEE safety protocols, and prepared technical
+              reports for regulatory compliance and handover to operations.
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="testing">
+      <h2>High-voltage testing I have performed</h2>
+      <ul class="tests">
+        <li>Insulation resistance</li>
+        <li>Turns ratio</li>
+        <li>Winding resistance</li>
+        <li>Dielectric strength</li>
+        <li>Circuit breaker timing</li>
+        <li>Contact resistance</li>
+        <li>Protection relay calibration</li>
+        <li>Power quality analysis</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="box">
+          <h3>Software</h3>
+          <p>AutoCAD, ETAP, DIALux, MATLAB</p>
+        </div>
+        <div class="box">
+          <h3>Electrical systems</h3>
+          <p>
+            HV equipment testing, power distribution, earthing design, LV/MV
+            switchgear, lighting design
+          </p>
+        </div>
+        <div class="box">
+          <h3>MEP coordination</h3>
+          <p>
+            Electrical systems, HVAC coordination, fire protection, ELV systems,
+            BMS overview
+          </p>
+        </div>
+        <div class="box">
+          <h3>Testing and commissioning</h3>
+          <p>
+            Transformer testing, circuit breaker timing, insulation resistance,
+            relay calibration, power quality analysis
+          </p>
+        </div>
+        <div class="box">
+          <h3>Standards and codes</h3>
+          <p>
+            IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
+            regulations
+          </p>
+        </div>
+        <div class="box">
+          <h3>Documentation</h3>
+          <p>
+            Shop drawing review, material submittals, method statements,
+            progress reports, technical reports
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="edu">
+      <h2>Education</h2>
+      <h3>
+        Bachelor of Engineering, Electrical and Electronics (Power and Control)
+      </h3>
+      <p>Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.</p>
+    </section>
+  </div>
+
+  <footer id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <div class="contact">
+        <a href="mailto:yadavamrendra083@gmail.com"
+          >yadavamrendra083@gmail.com</a
+        >
+        <a href="tel:+9779844330025">+977-9844330025</a>
+        <span>Kathmandu, Nepal</span>
+      </div>
+      <p class="small">References available on request.</p>
+    </div>
+  </footer>
 </body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Amrendra Kumar Yadav – MEP &amp; Electrical Power Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #eef2f5;
+        --surface: #ffffff;
+        --ink: #14293d;
+        --muted: #51647a;
+        --line: #c9d4de;
+        --accent: #1c4fd6;
+        --hot: #e8a800;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #0e1824;
+          --surface: #15243436;
+          --ink: #e6edf4;
+          --muted: #9fb0c2;
+          --line: #2a3d52;
+          --accent: #7ea2ff;
+          --hot: #ffc531;
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #0e1824;
+        --surface: #15243436;
+        --ink: #e6edf4;
+        --muted: #9fb0c2;
+        --line: #2a3d52;
+        --accent: #7ea2ff;
+        --hot: #ffc531;
+        color-scheme: dark;
+      }
+      html {
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+        scroll-behavior: smooth;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          17px/1.65 "IBM Plex Sans",
+          system-ui,
+          sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Bricolage Grotesque", "IBM Plex Sans", sans-serif;
+        line-height: 1.1;
+        margin: 0;
+      }
+      a {
+        color: var(--accent);
+      }
+      :focus-visible {
+        outline: 3px solid var(--hot);
+        outline-offset: 3px;
+      }
+      .wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      nav {
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        font-weight: 500;
+        font-size: 15px;
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+      nav a:hover {
+        color: var(--ink);
+      }
+      .hero {
+        padding: 48px 0 56px;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 8vw, 5.4rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        max-width: 12ch;
+      }
+      .hero p.role {
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: clamp(1.2rem, 3vw, 1.7rem);
+        font-weight: 500;
+        color: var(--accent);
+        margin: 18px 0 0;
+      }
+      .hero p.lede {
+        max-width: 60ch;
+        color: var(--muted);
+        margin: 18px 0 28px;
+      }
+      .btns {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 6px;
+        font-weight: 500;
+        text-decoration: none;
+        border: 2px solid var(--ink);
+        color: var(--ink);
+      }
+      .btn.main {
+        background: var(--ink);
+        color: var(--bg);
+      }
+      /* single-line diagram: the one memorable element */
+      .sld {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 44px;
+        color: var(--ink);
+      }
+      .sld .w {
+        stroke: currentColor;
+        stroke-width: 2.5;
+        fill: none;
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        animation: draw 2.4s ease-out 0.2s forwards;
+      }
+      .sld .p {
+        fill: var(--hot);
+        opacity: 0;
+        animation: on 0.4s ease-out 2.3s forwards;
+      }
+      .sld text {
+        font:
+          500 13px "IBM Plex Sans",
+          sans-serif;
+        fill: var(--muted);
+      }
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes on {
+        to {
+          opacity: 1;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .sld .w {
+          animation: none;
+          stroke-dashoffset: 0;
+        }
+        .sld .p {
+          animation: none;
+          opacity: 1;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      section {
+        padding: 56px 0;
+        border-top: 1px solid var(--line);
+      }
+      h2 {
+        font-size: clamp(1.7rem, 4vw, 2.4rem);
+        font-weight: 700;
+        margin-bottom: 28px;
+      }
+      .job {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 12px 32px;
+        padding: 0 0 36px;
+        margin-bottom: 36px;
+        border-bottom: 1px solid var(--line);
+      }
+      .job:last-child {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+      .job .when {
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .job h3 {
+        font-size: 1.35rem;
+        margin-bottom: 2px;
+      }
+      .job .org {
+        color: var(--accent);
+        font-weight: 500;
+        margin: 0 0 12px;
+      }
+      ul {
+        margin: 0;
+        padding-left: 1.1em;
+      }
+      li {
+        margin: 0 0 8px;
+        max-width: 68ch;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+      .box {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 22px;
+      }
+      .box h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+      .box p,
+      .box ul {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+      .tests {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .tests li {
+        margin: 0;
+        padding: 8px 14px;
+        border: 1px solid var(--line);
+        border-left: 4px solid var(--hot);
+        border-radius: 4px;
+        background: var(--surface);
+        max-width: none;
+        font-size: 15px;
+      }
+      .edu h3 {
+        font-size: 1.3rem;
+      }
+      .edu p {
+        margin: 6px 0 0;
+        color: var(--muted);
+      }
+      footer {
+        padding: 56px 0 64px;
+        border-top: 1px solid var(--line);
+      }
+      footer h2 {
+        margin-bottom: 14px;
+      }
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 32px;
+        font-size: 1.1rem;
+      }
+      .small {
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 36px;
+      }
+      @media (max-width: 700px) {
+        .job {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav aria-label="Sections">
+        <a href="#about">About</a><a href="#experience">Experience</a
+        ><a href="#testing">Testing</a><a href="#skills">Skills</a
+        ><a href="#education">Education</a><a href="#contact">Contact</a>
+      </nav>
+
+      <header class="hero" id="about">
+        <h1>Amrendra Kumar Yadav</h1>
+        <p class="role">MEP engineer, electrical and power systems</p>
+        <p class="lede">
+          Electrical and Electronics Engineer in Kathmandu working across MEP
+          coordination, high-voltage equipment testing, commissioning and
+          electrical system design, on commercial and industrial projects. I
+          work with architects, structural engineers, contractors and
+          consultants to deliver on schedule and within budget.
+        </p>
+        <div class="btns">
+          <a class="btn main" href="mailto:yadavamrendra083@gmail.com"
+            >Email me</a
+          ><a class="btn" href="#experience">See my experience</a>
+        </div>
+
+        <svg
+          class="sld"
+          viewBox="0 0 900 150"
+          role="img"
+          aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
+        >
+          <path
+            class="w"
+            d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
+          ></path>
+          <circle class="w" cx="170" cy="60" r="20"></circle>
+          <circle class="w" cx="320" cy="60" r="20"></circle>
+          <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
+          <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
+          <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
+          <text x="20" y="40">132 kV</text>
+          <text x="140" y="108">Transformer</text>
+          <text x="290" y="108">Transformer</text>
+          <text x="440" y="142">LV/MV switchgear</text>
+          <text x="570" y="142">Distribution</text>
+          <text x="725" y="142">Earthing</text>
+        </svg>
+      </header>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <article class="job">
+          <div class="when">March 2026 – present</div>
+          <div>
+            <h3>Electrical Engineer</h3>
+            <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
+            <ul>
+              <li>
+                Coordinate and supervise MEP installation: electrical, HVAC,
+                plumbing, fire protection and ELV systems, to design
+                specifications and international standards.
+              </li>
+              <li>
+                Review shop drawings, material submittals and method statements
+                across active sites.
+              </li>
+              <li>
+                Inspect sites and resolve technical issues during installation
+                to hold quality and timelines.
+              </li>
+              <li>
+                Coordinate with architectural, structural and interior design
+                teams.
+              </li>
+              <li>
+                Write progress and inspection reports, and attend coordination
+                meetings with stakeholders and consultants.
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <div class="when">August 2025 – March 2026</div>
+          <div>
+            <h3>Electrical Engineer</h3>
+            <p class="org">Clean Power T&amp;C, Lalitpur</p>
+            <ul>
+              <li>
+                Designed and oversaw electrical installations for commercial and
+                industrial projects, to national electrical codes and IEC/IEEE
+                safety standards.
+              </li>
+              <li>
+                Supervised contractors on electrical distribution systems,
+                monitoring quality and completion dates.
+              </li>
+              <li>
+                Prepared AutoCAD drawings, specifications and technical
+                documentation.
+              </li>
+              <li>
+                Assessed electrical system performance on site and identified
+                improvements.
+              </li>
+              <li>
+                Worked with project managers, contractors and consultants to
+                deliver on schedule and within budget.
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <div class="when">May 2025 – August 2025</div>
+          <div>
+            <h3>High Voltage Testing Engineer (Internship)</h3>
+            <p class="org">Clean Power T&amp;C, Lalitpur</p>
+            <ul>
+              <li>
+                Ran testing and commissioning procedures for transformers,
+                circuit breakers and switchgear up to 132 kV.
+              </li>
+              <li>
+                Performed insulation resistance, turns ratio, winding resistance
+                and dielectric strength tests on power transformers.
+              </li>
+              <li>
+                Carried out circuit breaker timing tests, contact resistance
+                measurements and protection relay calibration.
+              </li>
+              <li>
+                Kept to IEC and IEEE safety protocols, and prepared technical
+                reports for regulatory compliance and handover to operations.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="testing">
+        <h2>High-voltage testing I have performed</h2>
+        <ul class="tests">
+          <li>Insulation resistance</li>
+          <li>Turns ratio</li>
+          <li>Winding resistance</li>
+          <li>Dielectric strength</li>
+          <li>Circuit breaker timing</li>
+          <li>Contact resistance</li>
+          <li>Protection relay calibration</li>
+          <li>Power quality analysis</li>
+        </ul>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="grid">
+          <div class="box">
+            <h3>Software</h3>
+            <p>AutoCAD, ETAP, DIALux, MATLAB</p>
+          </div>
+          <div class="box">
+            <h3>Electrical systems</h3>
+            <p>
+              HV equipment testing, power distribution, earthing design, LV/MV
+              switchgear, lighting design
+            </p>
+          </div>
+          <div class="box">
+            <h3>MEP coordination</h3>
+            <p>
+              Electrical systems, HVAC coordination, fire protection, ELV
+              systems, BMS overview
+            </p>
+          </div>
+          <div class="box">
+            <h3>Testing and commissioning</h3>
+            <p>
+              Transformer testing, circuit breaker timing, insulation
+              resistance, relay calibration, power quality analysis
+            </p>
+          </div>
+          <div class="box">
+            <h3>Standards and codes</h3>
+            <p>
+              IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
+              regulations
+            </p>
+          </div>
+          <div class="box">
+            <h3>Documentation</h3>
+            <p>
+              Shop drawing review, material submittals, method statements,
+              progress reports, technical reports
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="edu">
+        <h2>Education</h2>
+        <h3>
+          Bachelor of Engineering, Electrical and Electronics (Power and
+          Control)
+        </h3>
+        <p>
+          Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.
+        </p>
+      </section>
+    </div>
+
+    <footer id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <div class="contact">
+          <a href="mailto:yadavamrendra083@gmail.com"
+            >yadavamrendra083@gmail.com</a
+          >
+          <a href="tel:+9779844330025">+977-9844330025</a>
+          <span>Kathmandu, Nepal</span>
+        </div>
+        <p class="small">References available on request.</p>
+      </div>
+    </footer>
+  </body>
 </html>
