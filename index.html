@@ -1,869 +1,221 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Amrendra Kumar Yadav – MEP &amp; Electrical Power Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bg: #eef2f5;
-        --surface: #ffffff;
-        --ink: #14293d;
-        --muted: #51647a;
-        --line: #c9d4de;
-        --accent: #1c4fd6;
-        --hot: #e8a800;
-        box-sizing: border-box;
-        padding-top: env(safe-area-inset-top, 0px);
-        padding-bottom: env(safe-area-inset-bottom, 0px);
-        color-scheme: light;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root:not([data-theme="light"]) {
-          --bg: #0e1824;
-          --surface: #15243436;
-          --ink: #e6edf4;
-          --muted: #9fb0c2;
-          --line: #2a3d52;
-          --accent: #7ea2ff;
-          --hot: #ffc531;
-          color-scheme: dark;
-        }
-      }
-      :root[data-theme="dark"] {
-        --bg: #0e1824;
-        --surface: #15243436;
-        --ink: #e6edf4;
-        --muted: #9fb0c2;
-        --line: #2a3d52;
-        --accent: #7ea2ff;
-        --hot: #ffc531;
-        color-scheme: dark;
-      }
-      html {
-        scroll-padding-top: env(safe-area-inset-top, 0px);
-        scroll-behavior: smooth;
-      }
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--ink);
-        font:
-          17px/1.65 "IBM Plex Sans",
-          system-ui,
-          sans-serif;
-      }
-      h1,
-      h2,
-      h3 {
-        font-family: "Bricolage Grotesque", "IBM Plex Sans", sans-serif;
-        line-height: 1.1;
-        margin: 0;
-      }
-      a {
-        color: var(--accent);
-      }
-      :focus-visible {
-        outline: 3px solid var(--hot);
-        outline-offset: 3px;
-      }
-      .wrap {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
-      nav {
-        display: flex;
-        gap: 22px;
-        flex-wrap: wrap;
-        padding: 20px 0;
-        font-weight: 500;
-        font-size: 15px;
-      }
-      nav a {
-        color: var(--muted);
-        text-decoration: none;
-      }
-      nav a:hover {
-        color: var(--ink);
-      }
-      .hero {
-        padding: 48px 0 56px;
-      }
-      .hero h1 {
-        font-size: clamp(2.6rem, 8vw, 5.4rem);
-        font-weight: 800;
-        letter-spacing: -0.03em;
-        max-width: 12ch;
-      }
-      .hero p.role {
-        font-family: "Bricolage Grotesque", sans-serif;
-        font-size: clamp(1.2rem, 3vw, 1.7rem);
-        font-weight: 500;
-        color: var(--accent);
-        margin: 18px 0 0;
-      }
-      .hero p.lede {
-        max-width: 60ch;
-        color: var(--muted);
-        margin: 18px 0 28px;
-      }
-      .btns {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-      }
-      .btn {
-        display: inline-block;
-        padding: 12px 22px;
-        border-radius: 6px;
-        font-weight: 500;
-        text-decoration: none;
-        border: 2px solid var(--ink);
-        color: var(--ink);
-      }
-      .btn.main {
-        background: var(--ink);
-        color: var(--bg);
-      }
-      /* single-line diagram: the one memorable element */
-      .sld {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin-top: 44px;
-        color: var(--ink);
-      }
-      .sld .w {
-        stroke: currentColor;
-        stroke-width: 2.5;
-        fill: none;
-        stroke-dasharray: 1200;
-        stroke-dashoffset: 1200;
-        animation: draw 2.4s ease-out 0.2s forwards;
-      }
-      .sld .p {
-        fill: var(--hot);
-        opacity: 0;
-        animation: on 0.4s ease-out 2.3s forwards;
-      }
-      .sld text {
-        font:
-          500 13px "IBM Plex Sans",
-          sans-serif;
-        fill: var(--muted);
-      }
-      @keyframes draw {
-        to {
-          stroke-dashoffset: 0;
-        }
-      }
-      @keyframes on {
-        to {
-          opacity: 1;
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .sld .w {
-          animation: none;
-          stroke-dashoffset: 0;
-        }
-        .sld .p {
-          animation: none;
-          opacity: 1;
-        }
-        html {
-          scroll-behavior: auto;
-        }
-      }
-      section {
-        padding: 56px 0;
-        border-top: 1px solid var(--line);
-      }
-      h2 {
-        font-size: clamp(1.7rem, 4vw, 2.4rem);
-        font-weight: 700;
-        margin-bottom: 28px;
-      }
-      .job {
-        display: grid;
-        grid-template-columns: 200px 1fr;
-        gap: 12px 32px;
-        padding: 0 0 36px;
-        margin-bottom: 36px;
-        border-bottom: 1px solid var(--line);
-      }
-      .job:last-child {
-        border: 0;
-        margin: 0;
-        padding: 0;
-      }
-      .job .when {
-        color: var(--muted);
-        font-size: 15px;
-      }
-      .job h3 {
-        font-size: 1.35rem;
-        margin-bottom: 2px;
-      }
-      .job .org {
-        color: var(--accent);
-        font-weight: 500;
-        margin: 0 0 12px;
-      }
-      ul {
-        margin: 0;
-        padding-left: 1.1em;
-      }
-      li {
-        margin: 0 0 8px;
-        max-width: 68ch;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-      }
-      .box {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 6px;
-        padding: 22px;
-      }
-      .box h3 {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-      }
-      .box p,
-      .box ul {
-        margin: 0;
-        color: var(--muted);
-        font-size: 16px;
-      }
-      .tests {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-      .tests li {
-        margin: 0;
-        padding: 8px 14px;
-        border: 1px solid var(--line);
-        border-left: 4px solid var(--hot);
-        border-radius: 4px;
-        background: var(--surface);
-        max-width: none;
-        font-size: 15px;
-      }
-      .edu h3 {
-        font-size: 1.3rem;
-      }
-      .edu p {
-        margin: 6px 0 0;
-        color: var(--muted);
-      }
-      footer {
-        padding: 56px 0 64px;
-        border-top: 1px solid var(--line);
-      }
-      footer h2 {
-        margin-bottom: 14px;
-      }
-      .contact {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px 32px;
-        font-size: 1.1rem;
-      }
-      .small {
-        color: var(--muted);
-        font-size: 14px;
-        margin-top: 36px;
-      }
-      @media (max-width: 700px) {
-        .job {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <nav aria-label="Sections">
-        <a href="#about">About</a><a href="#experience">Experience</a
-        ><a href="#testing">Testing</a><a href="#skills">Skills</a
-        ><a href="#education">Education</a><a href="#contact">Contact</a>
-      </nav>
-
-      <header class="hero" id="about">
-        <h1>Amrendra Kumar Yadav</h1>
-        <p class="role">MEP engineer, electrical and power systems</p>
-        <p class="lede">
-          Electrical and Electronics Engineer in Kathmandu working across MEP
-          coordination, high-voltage equipment testing, commissioning and
-          electrical system design, on commercial and industrial projects. I
-          work with architects, structural engineers, contractors and
-          consultants to deliver on schedule and within budget.
-        </p>
-        <div class="btns">
-          <a class="btn main" href="mailto:yadavamrendra083@gmail.com"
-            >Email me</a
-          ><a class="btn" href="#experience">See my experience</a>
-        </div>
-
-        <svg
-          class="sld"
-          viewBox="0 0 900 150"
-          role="img"
-          aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
-        >
-          <path
-            class="w"
-            d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
-          ></path>
-          <circle class="w" cx="170" cy="60" r="20"></circle>
-          <circle class="w" cx="320" cy="60" r="20"></circle>
-          <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
-          <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
-          <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
-          <text x="20" y="40">132 kV</text>
-          <text x="140" y="108">Transformer</text>
-          <text x="290" y="108">Transformer</text>
-          <text x="440" y="142">LV/MV switchgear</text>
-          <text x="570" y="142">Distribution</text>
-          <text x="725" y="142">Earthing</text>
-        </svg>
-      </header>
-
-      <section id="experience">
-        <h2>Experience</h2>
-        <article class="job">
-          <div class="when">March 2026 – present</div>
-          <div>
-            <h3>Electrical Engineer</h3>
-            <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
-            <ul>
-              <li>
-                Coordinate and supervise MEP installation: electrical, HVAC,
-                plumbing, fire protection and ELV systems, to design
-                specifications and international standards.
-              </li>
-              <li>
-                Review shop drawings, material submittals and method statements
-                across active sites.
-              </li>
-              <li>
-                Inspect sites and resolve technical issues during installation
-                to hold quality and timelines.
-              </li>
-              <li>
-                Coordinate with architectural, structural and interior design
-                teams.
-              </li>
-              <li>
-                Write progress and inspection reports, and attend coordination
-                meetings with stakeholders and consultants.
-              </li>
-            </ul>
-          </div>
-        </article>
-        <article class="job">
-          <div class="when">August 2025 – March 2026</div>
-          <div>
-            <h3>Electrical Engineer</h3>
-            <p class="org">Clean Power T&amp;C, Lalitpur</p>
-            <ul>
-              <li>
-                Designed and oversaw electrical installations for commercial and
-                industrial projects, to national electrical codes and IEC/IEEE
-                safety standards.
-              </li>
-              <li>
-                Supervised contractors on electrical distribution systems,
-                monitoring quality and completion dates.
-              </li>
-              <li>
-                Prepared AutoCAD drawings, specifications and technical
-                documentation.
-              </li>
-              <li>
-                Assessed electrical system performance on site and identified
-                improvements.
-              </li>
-              <li>
-                Worked with project managers, contractors and consultants to
-                deliver on schedule and within budget.
-              </li>
-            </ul>
-          </div>
-        </article>
-        <article class="job">
-          <div class="when">May 2025 – August 2025</div>
-          <div>
-            <h3>High Voltage Testing Engineer (Internship)</h3>
-            <p class="org">Clean Power T&amp;C, Lalitpur</p>
-            <ul>
-              <li>
-                Ran testing and commissioning procedures for transformers,
-                circuit breakers and switchgear up to 132 kV.
-              </li>
-              <li>
-                Performed insulation resistance, turns ratio, winding resistance
-                and dielectric strength tests on power transformers.
-              </li>
-              <li>
-                Carried out circuit breaker timing tests, contact resistance
-                measurements and protection relay calibration.
-              </li>
-              <li>
-                Kept to IEC and IEEE safety protocols, and prepared technical
-                reports for regulatory compliance and handover to operations.
-              </li>
-            </ul>
-          </div>
-        </article>
-      </section>
-
-      <section id="testing">
-        <h2>High-voltage testing I have performed</h2>
-        <ul class="tests">
-          <li>Insulation resistance</li>
-          <li>Turns ratio</li>
-          <li>Winding resistance</li>
-          <li>Dielectric strength</li>
-          <li>Circuit breaker timing</li>
-          <li>Contact resistance</li>
-          <li>Protection relay calibration</li>
-          <li>Power quality analysis</li>
-        </ul>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="grid">
-          <div class="box">
-            <h3>Software</h3>
-            <p>AutoCAD, ETAP, DIALux, MATLAB</p>
-          </div>
-          <div class="box">
-            <h3>Electrical systems</h3>
-            <p>
-              HV equipment testing, power distribution, earthing design, LV/MV
-              switchgear, lighting design
-            </p>
-          </div>
-          <div class="box">
-            <h3>MEP coordination</h3>
-            <p>
-              Electrical systems, HVAC coordination, fire protection, ELV
-              systems, BMS overview
-            </p>
-          </div>
-          <div class="box">
-            <h3>Testing and commissioning</h3>
-            <p>
-              Transformer testing, circuit breaker timing, insulation
-              resistance, relay calibration, power quality analysis
-            </p>
-          </div>
-          <div class="box">
-            <h3>Standards and codes</h3>
-            <p>
-              IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
-              regulations
-            </p>
-          </div>
-          <div class="box">
-            <h3>Documentation</h3>
-            <p>
-              Shop drawing review, material submittals, method statements,
-              progress reports, technical reports
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="education" class="edu">
-        <h2>Education</h2>
-        <h3>
-          Bachelor of Engineering, Electrical and Electronics (Power and
-          Control)
-        </h3>
-        <p>
-          Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.
-        </p>
-      </section>
-    </div>
-
-    <footer id="contact">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <div class="contact">
-          <a href="mailto:yadavamrendra083@gmail.com"
-            >yadavamrendra083@gmail.com</a
-          >
-          <a href="tel:+9779844330025">+977-9844330025</a>
-          <span>Kathmandu, Nepal</span>
-        </div>
-        <p class="small">References available on request.</p>
-      </div>
-    </footer>
-  </body>
-</html>
 <head>
-  <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  />
-  <title>Amrendra Kumar Yadav – MEP &amp; Electrical Power Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap"
-    rel="stylesheet"
-  />
-  <style>
-    :root {
-      --bg: #eef2f5;
-      --surface: #ffffff;
-      --ink: #14293d;
-      --muted: #51647a;
-      --line: #c9d4de;
-      --accent: #1c4fd6;
-      --hot: #e8a800;
-      box-sizing: border-box;
-      padding-top: env(safe-area-inset-top, 0px);
-      padding-bottom: env(safe-area-inset-bottom, 0px);
-      color-scheme: light;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --bg: #0e1824;
-        --surface: #15243436;
-        --ink: #e6edf4;
-        --muted: #9fb0c2;
-        --line: #2a3d52;
-        --accent: #7ea2ff;
-        --hot: #ffc531;
-        color-scheme: dark;
-      }
-    }
-    :root[data-theme="dark"] {
-      --bg: #0e1824;
-      --surface: #15243436;
-      --ink: #e6edf4;
-      --muted: #9fb0c2;
-      --line: #2a3d52;
-      --accent: #7ea2ff;
-      --hot: #ffc531;
-      color-scheme: dark;
-    }
-    html {
-      scroll-padding-top: env(safe-area-inset-top, 0px);
-      scroll-behavior: smooth;
-    }
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font:
-        17px/1.65 "IBM Plex Sans",
-        system-ui,
-        sans-serif;
-    }
-    h1,
-    h2,
-    h3 {
-      font-family: "Bricolage Grotesque", "IBM Plex Sans", sans-serif;
-      line-height: 1.1;
-      margin: 0;
-    }
-    a {
-      color: var(--accent);
-    }
-    :focus-visible {
-      outline: 3px solid var(--hot);
-      outline-offset: 3px;
-    }
-    .wrap {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    nav {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-      padding: 20px 0;
-      font-weight: 500;
-      font-size: 15px;
-    }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-    nav a:hover {
-      color: var(--ink);
-    }
-    .hero {
-      padding: 48px 0 56px;
-    }
-    .hero h1 {
-      font-size: clamp(2.6rem, 8vw, 5.4rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      max-width: 12ch;
-    }
-    .hero p.role {
-      font-family: "Bricolage Grotesque", sans-serif;
-      font-size: clamp(1.2rem, 3vw, 1.7rem);
-      font-weight: 500;
-      color: var(--accent);
-      margin: 18px 0 0;
-    }
-    .hero p.lede {
-      max-width: 60ch;
-      color: var(--muted);
-      margin: 18px 0 28px;
-    }
-    .btns {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 6px;
-      font-weight: 500;
-      text-decoration: none;
-      border: 2px solid var(--ink);
-      color: var(--ink);
-    }
-    .btn.main {
-      background: var(--ink);
-      color: var(--bg);
-    }
-    /* single-line diagram: the one memorable element */
-    .sld {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-top: 44px;
-      color: var(--ink);
-    }
-    .sld .w {
-      stroke: currentColor;
-      stroke-width: 2.5;
-      fill: none;
-      stroke-dasharray: 1200;
-      stroke-dashoffset: 1200;
-      animation: draw 2.4s ease-out 0.2s forwards;
-    }
-    .sld .p {
-      fill: var(--hot);
-      opacity: 0;
-      animation: on 0.4s ease-out 2.3s forwards;
-    }
-    .sld text {
-      font:
-        500 13px "IBM Plex Sans",
-        sans-serif;
-      fill: var(--muted);
-    }
-    @keyframes draw {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-    @keyframes on {
-      to {
-        opacity: 1;
-      }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .sld .w {
-        animation: none;
-        stroke-dashoffset: 0;
-      }
-      .sld .p {
-        animation: none;
-        opacity: 1;
-      }
-      html {
-        scroll-behavior: auto;
-      }
-    }
-    section {
-      padding: 56px 0;
-      border-top: 1px solid var(--line);
-    }
-    h2 {
-      font-size: clamp(1.7rem, 4vw, 2.4rem);
-      font-weight: 700;
-      margin-bottom: 28px;
-    }
-    .job {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 12px 32px;
-      padding: 0 0 36px;
-      margin-bottom: 36px;
-      border-bottom: 1px solid var(--line);
-    }
-    .job:last-child {
-      border: 0;
-      margin: 0;
-      padding: 0;
-    }
-    .job .when {
-      color: var(--muted);
-      font-size: 15px;
-    }
-    .job h3 {
-      font-size: 1.35rem;
-      margin-bottom: 2px;
-    }
-    .job .org {
-      color: var(--accent);
-      font-weight: 500;
-      margin: 0 0 12px;
-    }
-    ul {
-      margin: 0;
-      padding-left: 1.1em;
-    }
-    li {
-      margin: 0 0 8px;
-      max-width: 68ch;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .box {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 22px;
-    }
-    .box h3 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-    .box p,
-    .box ul {
-      margin: 0;
-      color: var(--muted);
-      font-size: 16px;
-    }
-    .tests {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .tests li {
-      margin: 0;
-      padding: 8px 14px;
-      border: 1px solid var(--line);
-      border-left: 4px solid var(--hot);
-      border-radius: 4px;
-      background: var(--surface);
-      max-width: none;
-      font-size: 15px;
-    }
-    .edu h3 {
-      font-size: 1.3rem;
-    }
-    .edu p {
-      margin: 6px 0 0;
-      color: var(--muted);
-    }
-    footer {
-      padding: 56px 0 64px;
-      border-top: 1px solid var(--line);
-    }
-    footer h2 {
-      margin-bottom: 14px;
-    }
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 32px;
-      font-size: 1.1rem;
-    }
-    .small {
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 36px;
-    }
-    @media (max-width: 700px) {
-      .job {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Amrendra Kumar Yadav – MEP &amp; Electrical Power Engineer</title>
+<meta name="description" content="Amrendra Kumar Yadav is an electrical and MEP engineer in Kathmandu, working on design, installation, testing and commissioning." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&amp;family=Playfair+Display:wght@500;800&amp;display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --accent: #009bdf; --ink: #000000; --grey: #758398; --pale: #f6f8fa;
+    --white: #ffffff; --navy: #243673; --mist: #fbfcff; --sky: #bfd1ff; --line: #dddddd;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 106.25%; }
+  body { margin: 0; background: var(--pale); color: var(--grey); font: 400 1rem/1.65 "Barlow Semi Condensed", sans-serif; }
+  h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 800; color: var(--ink); margin: 0; }
+  h4, h6 { font-family: "Barlow Semi Condensed", sans-serif; margin: 0; }
+  a { color: var(--ink); text-decoration: none; }
+  a:hover { color: var(--accent); }
+  :focus-visible { outline: 2px dotted var(--accent); outline-offset: 3px; }
+  .box { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+  /* header (transparent over hero) */
+  header.top { position: absolute; top: 0; left: 0; right: 0; z-index: 10; }
+  header.top .box { display: flex; align-items: center; justify-content: space-between; min-height: 70px; gap: 16px; flex-wrap: wrap; }
+  .logo { width: 56px; height: 56px; border-radius: 50%; background: var(--navy); color: var(--white); display: grid; place-items: center; font: 800 1.05rem "Playfair Display", serif; letter-spacing: .02em; }
+  .logo:hover { color: var(--white); background: var(--accent); }
+  header nav { display: flex; gap: 32px; flex-wrap: wrap; }
+  header nav a { text-transform: uppercase; font-weight: 500; letter-spacing: .04em; position: relative; padding: 6px 0; }
+  header nav a::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 1px; background: currentColor; transform: scale(0, 1); transition: transform .3s; }
+  header nav a:hover::before, header nav a.cur::before { transform: scale(1, 1); }
+  header nav a.cur { color: var(--accent); }
+
+  h6.kicker { font-size: 1rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--grey); }
+  .rule { height: 2px; width: 90px; background: var(--accent); margin: 18px 0 22px; }
+
+  /* hero */
+  .hero { min-height: 100vh; display: flex; align-items: center; padding: 110px 0 70px; background: linear-gradient(135deg, var(--white) 0%, var(--pale) 55%, #e6ecf7 100%); position: relative; overflow: hidden; }
+  .hero .box { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; width: 100%; }
+  .hero h1 { font-size: clamp(2.8rem, 7vw, 4.9rem); line-height: 1.15; }
+  .hero h3 { font-size: clamp(1.3rem, 3vw, 2rem); color: var(--accent); font-weight: 500; margin-top: 10px; }
+  .hero .intro { max-width: 46ch; margin: 22px 0 0; font-size: 1.15rem; }
+  .hero figure { margin: 0; justify-self: center; position: relative; }
+  .hero figure img { display: block; width: min(100%, 440px); height: auto; border-radius: 4px; box-shadow: 18px 18px 0 var(--sky); }
+
+  /* about */
+  .about { padding: 110px 0; background: var(--white); }
+  .about h2 { font-size: clamp(1.8rem, 4vw, 2.9rem); line-height: 1.3; max-width: 24ch; margin: 14px 0 56px; }
+  .about .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .about h3 { font-size: clamp(1.4rem, 2.6vw, 2.06rem); line-height: 1.3; }
+  .about p { margin: 0 0 18px; }
+  .btn { display: inline-block; margin-top: 8px; text-transform: uppercase; letter-spacing: 2px; font-weight: 500; font-size: .94rem; color: var(--accent); border-bottom: 2px solid transparent; padding: 4px 0; }
+  .btn:hover { color: var(--ink); border-color: var(--accent); }
+
+  /* defines */
+  .defines { padding: 100px 0; background: var(--navy); color: var(--sky); }
+  .defines h2 { color: var(--white); font-size: clamp(2rem, 4.5vw, 2.94rem); display: inline-block; }
+  .defines .lead { max-width: 52ch; margin: 22px 0 14px; font-size: 1.15rem; color: var(--sky); }
+  .arrow { display: inline-block; width: 48px; margin-left: 18px; vertical-align: middle; color: var(--white); transition: transform .25s; }
+  .arrow:hover { transform: translateX(6px); color: var(--accent); }
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 56px; }
+  .item { display: grid; grid-template-columns: 48px 1fr; gap: 18px; }
+  .item svg { width: 44px; height: 44px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .item h4 { color: var(--white); font-size: 1.3rem; font-weight: 500; margin-bottom: 6px; }
+  .item p { margin: 0; color: var(--sky); }
+
+  /* band with diagram */
+  .band { background: var(--ink); padding: 56px 0 44px; color: var(--white); }
+  .sld { width: 100%; height: auto; display: block; color: var(--white); }
+  .sld .w { stroke: currentColor; stroke-width: 2.5; fill: none; stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: draw 2.4s ease-out .2s forwards; transition: stroke .4s; }
+  .sld .p { fill: var(--accent); opacity: 0; animation: on .4s ease-out 2.3s forwards; transition: fill .4s; }
+  .sld text { font: 500 13px "Barlow Semi Condensed", sans-serif; fill: var(--sky); transition: opacity .4s; }
+  .sld.off .w { stroke: #444; } .sld.off .p { fill: #444; } .sld.off text { opacity: .5; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes on { to { opacity: 1; } }
+  .trip-row { display: flex; align-items: center; gap: 16px; margin-top: 18px; flex-wrap: wrap; }
+  .trip { font: inherit; text-transform: uppercase; letter-spacing: 2px; font-size: .9rem; color: var(--white); background: transparent; border: 1px solid var(--white); padding: 10px 20px; border-radius: 2px; cursor: pointer; }
+  .trip:hover { background: var(--accent); border-color: var(--accent); }
+  #status { color: var(--sky); font-size: .95rem; }
+
+  /* skills + experience */
+  .two { padding: 110px 0; background: var(--pale); }
+  .two .box { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+  .two h2 { font-size: clamp(1.9rem, 4vw, 2.94rem); margin-bottom: 36px; }
+  .skill { margin-bottom: 26px; }
+  .skill .t { color: var(--ink); font-weight: 500; font-size: 1.05rem; margin-bottom: 6px; display: block; }
+  .skill .track { background: #e4e9f0; height: 30px; border-radius: 2px; overflow: hidden; }
+  .skill .bar { height: 100%; width: var(--w); background: var(--accent); color: var(--white); display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 0 12px; font-size: .85rem; white-space: nowrap; transition: width 1.2s cubic-bezier(.2,.7,.2,1); }
+  .js .skill .bar { width: 0; } .js .in .skill .bar { width: var(--w); }
+  .skill .bar span:first-child { overflow: hidden; text-overflow: ellipsis; }
+  .skill small { display: block; margin-top: 4px; font-size: .9rem; }
+  .job { display: grid; grid-template-columns: 170px 1fr; gap: 24px; padding: 0 0 34px; }
+  .job .when { font-size: .95rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--grey); position: relative; padding-bottom: 14px; margin-bottom: 8px; }
+  .job .when::after { content: ""; position: absolute; left: 0; right: 0; bottom: 5px; height: 1px; background: var(--line); }
+  .job .when::before { content: ""; position: absolute; right: 0; bottom: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); z-index: 1; }
+  .job .org { color: var(--ink); font-weight: 500; }
+  .job h4 { color: var(--ink); font-size: 1.35rem; font-weight: 500; }
+  .job p { margin: 6px 0 0; }
+
+  /* projects */
+  .projects { padding: 100px 0 110px; background: var(--white); }
+  .projects h2 { display: inline-block; font-size: clamp(2rem, 4.5vw, 2.94rem); }
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 44px; }
+  .card { aspect-ratio: 9/14; border-radius: 2px; padding: 28px; display: flex; flex-direction: column; justify-content: flex-end; color: var(--white); position: relative; overflow: hidden; background: linear-gradient(160deg, var(--navy), #0f1a3c); transition: transform .3s; }
+  .card:nth-child(2) { background: linear-gradient(160deg, #0b6fa0, #0a3f66); }
+  .card:nth-child(3) { background: linear-gradient(160deg, #1b2a52, #070b1a); }
+  .card:hover { transform: translateY(-6px); }
+  .card svg { position: absolute; top: 28px; left: 28px; width: 56px; height: 56px; stroke: var(--sky); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .card h4 { font: 800 1.6rem/1.2 "Playfair Display", serif; margin-bottom: 8px; }
+  .card p { margin: 0; color: var(--sky); font-size: .98rem; }
+
+  /* footer */
+  footer { background: var(--white); border-top: 1px solid rgba(8,63,135,.08); padding: 60px 0 40px; }
+  footer .grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+  footer h2 { font: 500 1.4rem "Barlow Semi Condensed", sans-serif; color: var(--ink); margin-bottom: 14px; }
+  footer .get { font: 800 clamp(2rem, 4.5vw, 3rem) "Playfair Display", serif; text-decoration: underline; color: var(--ink); }
+  footer .get:hover { color: var(--accent); }
+  footer ul { list-style: none; margin: 0; padding: 0; }
+  footer li { margin: 0 0 8px; }
+  footer a.l { color: var(--grey); } footer a.l:hover { color: var(--accent); }
+  .copy { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(8,63,135,.08); font-size: .95rem; }
+
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s, transform .7s; }
+  .js .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 921px) {
+    .hero .box { grid-template-columns: 1fr; }
+    .hero figure { order: -1; } .hero figure img { width: min(100%, 320px); }
+    .hero { padding-top: 140px; min-height: auto; }
+    .about .cols, .two .box, footer .grid { grid-template-columns: 1fr; gap: 36px; }
+    .three, .gallery { grid-template-columns: 1fr; }
+    .card { aspect-ratio: 16/10; }
+    header nav { gap: 20px; }
+  }
+  @media (max-width: 544px) { .job { grid-template-columns: 1fr; gap: 4px; } }
+  @media (prefers-reduced-motion: reduce) {
+    .sld .w { animation: none; stroke-dashoffset: 0; } .sld .p { animation: none; opacity: 1; }
+    html { scroll-behavior: auto; } .js .reveal { opacity: 1; transform: none; transition: none; }
+    .js .skill .bar { width: var(--w); transition: none; }
+  }
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <nav aria-label="Sections">
-      <a href="#about">About</a><a href="#experience">Experience</a
-      ><a href="#testing">Testing</a><a href="#skills">Skills</a
-      ><a href="#education">Education</a><a href="#contact">Contact</a>
+
+<header class="top">
+  <div class="box">
+    <a class="logo" href="#home" aria-label="Home">AKY</a>
+    <nav aria-label="Primary">
+      <a class="cur" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </div>
+</header>
 
-    <header class="hero" id="about">
-      <h1>Amrendra Kumar Yadav</h1>
-      <p class="role">MEP engineer, electrical and power systems</p>
-      <p class="lede">
-        Electrical and Electronics Engineer in Kathmandu working across MEP
-        coordination, high-voltage equipment testing, commissioning and
-        electrical system design, on commercial and industrial projects. I work
-        with architects, structural engineers, contractors and consultants to
-        deliver on schedule and within budget.
-      </p>
-      <div class="btns">
-        <a class="btn main" href="mailto:yadavamrendra083@gmail.com">Email me</a
-        ><a class="btn" href="#experience">See my experience</a>
+<main>
+  <section class="hero" id="home">
+    <div class="box">
+      <div>
+        <h6 class="kicker">Hello, my name is</h6>
+        <div class="rule"></div>
+        <h1>Amrendra Kumar Yadav</h1>
+        <h3>Electrical &amp; MEP Engineer</h3>
+        <p class="intro">I design, install, test and commission electrical systems for commercial and industrial projects in Nepal.</p>
       </div>
+      <figure>
+        <img id="me" src="photo.jpg" alt="Portrait of Amrendra Kumar Yadav" width="413" height="531" />
+      </figure>
+    </div>
+  </section>
 
-      <svg
-        class="sld"
-        viewBox="0 0 900 150"
-        role="img"
-        aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
-      >
-        <path
-          class="w"
-          d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
-        ></path>
+  <section class="about reveal" id="about">
+    <div class="box">
+      <h6 class="kicker">About me</h6>
+      <h2>I am an Electrical Engineer who works across MEP design, site installation and high-voltage testing.</h2>
+      <div class="cols">
+        <h3>From the test bench to the construction site.</h3>
+        <div>
+          <p>I studied Electrical and Electronics Engineering (Power and Control) at Kathmandu University. My final year project was power factor improvement using an FC-TCR system, controlled by Arduino and validated in MATLAB Simulink.</p>
+          <p>I started in high-voltage testing and commissioning of transformers, circuit breakers and switchgear up to 132 kV. Today I work on the design and installation side of MEP projects, coordinating with architects, structural engineers, contractors and consultants.</p>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="defines reveal">
+    <div class="box">
+      <h2>What defines my work?</h2>
+      <a class="arrow" href="#projects" aria-label="See projects"><svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 12h44M34 3l10 9-10 9"/></svg></a>
+      <p class="lead">Systems that are designed properly, installed carefully and tested before they are energized.</p>
+      <div class="three">
+        <div class="item">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V8h32v32H8zM8 20h32M20 8v32"/></svg>
+          <div><h4>Design</h4><p>Distribution, earthing and lighting design with AutoCAD, ETAP and DIALux, to IEC, IEEE and national codes.</p></div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M26 4L10 26h12l-2 18 18-24H26l0-16z"/></svg>
+          <div><h4>Testing</h4><p>Insulation resistance, turns ratio, breaker timing and relay calibration on equipment up to 132 kV.</p></div>
+        </div>
+        <div class="item">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="16" cy="16" r="6"/><circle cx="34" cy="16" r="6"/><path d="M4 40c0-8 5-12 12-12s12 4 12 12M24 40c0-6 4-10 10-10s10 4 10 10"/></svg>
+          <div><h4>Coordination</h4><p>Working with architects, structural engineers, contractors and consultants to deliver on schedule.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-label="Single-line diagram">
+    <div class="box">
+      <svg class="sld" id="sld" viewBox="0 0 900 150" role="img" aria-label="Single-line diagram from a 132 kV source through transformers and switchgear to loads">
+        <path class="w" d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"></path>
         <circle class="w" cx="170" cy="60" r="20"></circle>
         <circle class="w" cx="320" cy="60" r="20"></circle>
         <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
@@ -876,1528 +228,622 @@
         <text x="570" y="142">Distribution</text>
         <text x="725" y="142">Earthing</text>
       </svg>
-    </header>
-
-    <section id="experience">
-      <h2>Experience</h2>
-      <article class="job">
-        <div class="when">March 2026 – present</div>
-        <div>
-          <h3>Electrical Engineer</h3>
-          <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
-          <ul>
-            <li>
-              Coordinate and supervise MEP installation: electrical, HVAC,
-              plumbing, fire protection and ELV systems, to design
-              specifications and international standards.
-            </li>
-            <li>
-              Review shop drawings, material submittals and method statements
-              across active sites.
-            </li>
-            <li>
-              Inspect sites and resolve technical issues during installation to
-              hold quality and timelines.
-            </li>
-            <li>
-              Coordinate with architectural, structural and interior design
-              teams.
-            </li>
-            <li>
-              Write progress and inspection reports, and attend coordination
-              meetings with stakeholders and consultants.
-            </li>
-          </ul>
-        </div>
-      </article>
-      <article class="job">
-        <div class="when">August 2025 – March 2026</div>
-        <div>
-          <h3>Electrical Engineer</h3>
-          <p class="org">Clean Power T&amp;C, Lalitpur</p>
-          <ul>
-            <li>
-              Designed and oversaw electrical installations for commercial and
-              industrial projects, to national electrical codes and IEC/IEEE
-              safety standards.
-            </li>
-            <li>
-              Supervised contractors on electrical distribution systems,
-              monitoring quality and completion dates.
-            </li>
-            <li>
-              Prepared AutoCAD drawings, specifications and technical
-              documentation.
-            </li>
-            <li>
-              Assessed electrical system performance on site and identified
-              improvements.
-            </li>
-            <li>
-              Worked with project managers, contractors and consultants to
-              deliver on schedule and within budget.
-            </li>
-          </ul>
-        </div>
-      </article>
-      <article class="job">
-        <div class="when">May 2025 – August 2025</div>
-        <div>
-          <h3>High Voltage Testing Engineer (Internship)</h3>
-          <p class="org">Clean Power T&amp;C, Lalitpur</p>
-          <ul>
-            <li>
-              Ran testing and commissioning procedures for transformers, circuit
-              breakers and switchgear up to 132 kV.
-            </li>
-            <li>
-              Performed insulation resistance, turns ratio, winding resistance
-              and dielectric strength tests on power transformers.
-            </li>
-            <li>
-              Carried out circuit breaker timing tests, contact resistance
-              measurements and protection relay calibration.
-            </li>
-            <li>
-              Kept to IEC and IEEE safety protocols, and prepared technical
-              reports for regulatory compliance and handover to operations.
-            </li>
-          </ul>
-        </div>
-      </article>
-    </section>
-
-    <section id="testing">
-      <h2>High-voltage testing I have performed</h2>
-      <ul class="tests">
-        <li>Insulation resistance</li>
-        <li>Turns ratio</li>
-        <li>Winding resistance</li>
-        <li>Dielectric strength</li>
-        <li>Circuit breaker timing</li>
-        <li>Contact resistance</li>
-        <li>Protection relay calibration</li>
-        <li>Power quality analysis</li>
-      </ul>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="grid">
-        <div class="box">
-          <h3>Software</h3>
-          <p>AutoCAD, ETAP, DIALux, MATLAB</p>
-        </div>
-        <div class="box">
-          <h3>Electrical systems</h3>
-          <p>
-            HV equipment testing, power distribution, earthing design, LV/MV
-            switchgear, lighting design
-          </p>
-        </div>
-        <div class="box">
-          <h3>MEP coordination</h3>
-          <p>
-            Electrical systems, HVAC coordination, fire protection, ELV systems,
-            BMS overview
-          </p>
-        </div>
-        <div class="box">
-          <h3>Testing and commissioning</h3>
-          <p>
-            Transformer testing, circuit breaker timing, insulation resistance,
-            relay calibration, power quality analysis
-          </p>
-        </div>
-        <div class="box">
-          <h3>Standards and codes</h3>
-          <p>
-            IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
-            regulations
-          </p>
-        </div>
-        <div class="box">
-          <h3>Documentation</h3>
-          <p>
-            Shop drawing review, material submittals, method statements,
-            progress reports, technical reports
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="edu">
-      <h2>Education</h2>
-      <h3>
-        Bachelor of Engineering, Electrical and Electronics (Power and Control)
-      </h3>
-      <p>Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.</p>
-    </section>
-  </div>
-
-  <footer id="contact">
-    <div class="wrap">
-      <h2>Contact</h2>
-      <div class="contact">
-        <a href="mailto:yadavamrendra083@gmail.com"
-          >yadavamrendra083@gmail.com</a
-        >
-        <a href="tel:+9779844330025">+977-9844330025</a>
-        <span>Kathmandu, Nepal</span>
-      </div>
-      <p class="small">References available on request.</p>
-    </div>
-  </footer>
-</body>
-<div class="wrap">
-  <nav aria-label="Sections">
-    <a href="#about">About</a><a href="#experience">Experience</a
-    ><a href="#testing">Testing</a><a href="#skills">Skills</a
-    ><a href="#education">Education</a><a href="#contact">Contact</a>
-  </nav>
-
-  <header class="hero" id="about">
-    <h1>Amrendra Kumar Yadav</h1>
-    <p class="role">MEP engineer, electrical and power systems</p>
-    <p class="lede">
-      Electrical and Electronics Engineer in Kathmandu working across MEP
-      coordination, high-voltage equipment testing, commissioning and electrical
-      system design, on commercial and industrial projects. I work with
-      architects, structural engineers, contractors and consultants to deliver
-      on schedule and within budget.
-    </p>
-    <div class="btns">
-      <a class="btn main" href="mailto:yadavamrendra083@gmail.com">Email me</a
-      ><a class="btn" href="#experience">See my experience</a>
-    </div>
-
-    <svg
-      class="sld"
-      viewBox="0 0 900 150"
-      role="img"
-      aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
-    >
-      <path
-        class="w"
-        d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
-      ></path>
-      <circle class="w" cx="170" cy="60" r="20"></circle>
-      <circle class="w" cx="320" cy="60" r="20"></circle>
-      <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
-      <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
-      <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
-      <text x="20" y="40">132 kV</text>
-      <text x="140" y="108">Transformer</text>
-      <text x="290" y="108">Transformer</text>
-      <text x="440" y="142">LV/MV switchgear</text>
-      <text x="570" y="142">Distribution</text>
-      <text x="725" y="142">Earthing</text>
-    </svg>
-  </header>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <article class="job">
-      <div class="when">March 2026 – present</div>
-      <div>
-        <h3>Electrical Engineer</h3>
-        <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
-        <ul>
-          <li>
-            Coordinate and supervise MEP installation: electrical, HVAC,
-            plumbing, fire protection and ELV systems, to design specifications
-            and international standards.
-          </li>
-          <li>
-            Review shop drawings, material submittals and method statements
-            across active sites.
-          </li>
-          <li>
-            Inspect sites and resolve technical issues during installation to
-            hold quality and timelines.
-          </li>
-          <li>
-            Coordinate with architectural, structural and interior design teams.
-          </li>
-          <li>
-            Write progress and inspection reports, and attend coordination
-            meetings with stakeholders and consultants.
-          </li>
-        </ul>
-      </div>
-    </article>
-    <article class="job">
-      <div class="when">August 2025 – March 2026</div>
-      <div>
-        <h3>Electrical Engineer</h3>
-        <p class="org">Clean Power T&amp;C, Lalitpur</p>
-        <ul>
-          <li>
-            Designed and oversaw electrical installations for commercial and
-            industrial projects, to national electrical codes and IEC/IEEE
-            safety standards.
-          </li>
-          <li>
-            Supervised contractors on electrical distribution systems,
-            monitoring quality and completion dates.
-          </li>
-          <li>
-            Prepared AutoCAD drawings, specifications and technical
-            documentation.
-          </li>
-          <li>
-            Assessed electrical system performance on site and identified
-            improvements.
-          </li>
-          <li>
-            Worked with project managers, contractors and consultants to deliver
-            on schedule and within budget.
-          </li>
-        </ul>
-      </div>
-    </article>
-    <article class="job">
-      <div class="when">May 2025 – August 2025</div>
-      <div>
-        <h3>High Voltage Testing Engineer (Internship)</h3>
-        <p class="org">Clean Power T&amp;C, Lalitpur</p>
-        <ul>
-          <li>
-            Ran testing and commissioning procedures for transformers, circuit
-            breakers and switchgear up to 132 kV.
-          </li>
-          <li>
-            Performed insulation resistance, turns ratio, winding resistance and
-            dielectric strength tests on power transformers.
-          </li>
-          <li>
-            Carried out circuit breaker timing tests, contact resistance
-            measurements and protection relay calibration.
-          </li>
-          <li>
-            Kept to IEC and IEEE safety protocols, and prepared technical
-            reports for regulatory compliance and handover to operations.
-          </li>
-        </ul>
-      </div>
-    </article>
-  </section>
-
-  <section id="testing">
-    <h2>High-voltage testing I have performed</h2>
-    <ul class="tests">
-      <li>Insulation resistance</li>
-      <li>Turns ratio</li>
-      <li>Winding resistance</li>
-      <li>Dielectric strength</li>
-      <li>Circuit breaker timing</li>
-      <li>Contact resistance</li>
-      <li>Protection relay calibration</li>
-      <li>Power quality analysis</li>
-    </ul>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="box">
-        <h3>Software</h3>
-        <p>AutoCAD, ETAP, DIALux, MATLAB</p>
-      </div>
-      <div class="box">
-        <h3>Electrical systems</h3>
-        <p>
-          HV equipment testing, power distribution, earthing design, LV/MV
-          switchgear, lighting design
-        </p>
-      </div>
-      <div class="box">
-        <h3>MEP coordination</h3>
-        <p>
-          Electrical systems, HVAC coordination, fire protection, ELV systems,
-          BMS overview
-        </p>
-      </div>
-      <div class="box">
-        <h3>Testing and commissioning</h3>
-        <p>
-          Transformer testing, circuit breaker timing, insulation resistance,
-          relay calibration, power quality analysis
-        </p>
-      </div>
-      <div class="box">
-        <h3>Standards and codes</h3>
-        <p>
-          IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
-          regulations
-        </p>
-      </div>
-      <div class="box">
-        <h3>Documentation</h3>
-        <p>
-          Shop drawing review, material submittals, method statements, progress
-          reports, technical reports
-        </p>
+      <div class="trip-row">
+        <button class="trip" id="trip" type="button" aria-pressed="false">Trip the breaker</button>
+        <span id="status" aria-live="polite">Energized · 132 kV</span>
       </div>
     </div>
   </section>
 
-  <section id="education" class="edu">
-    <h2>Education</h2>
-    <h3>
-      Bachelor of Engineering, Electrical and Electronics (Power and Control)
-    </h3>
-    <p>Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.</p>
-  </section>
-</div>
-<nav aria-label="Sections">
-  <a href="#about">About</a><a href="#experience">Experience</a
-  ><a href="#testing">Testing</a><a href="#skills">Skills</a
-  ><a href="#education">Education</a><a href="#contact">Contact</a>
-</nav>
-<header class="hero" id="about">
-  <h1>Amrendra Kumar Yadav</h1>
-  <p class="role">MEP engineer, electrical and power systems</p>
-  <p class="lede">
-    Electrical and Electronics Engineer in Kathmandu working across MEP
-    coordination, high-voltage equipment testing, commissioning and electrical
-    system design, on commercial and industrial projects. I work with
-    architects, structural engineers, contractors and consultants to deliver on
-    schedule and within budget.
-  </p>
-  <div class="btns">
-    <a class="btn main" href="mailto:yadavamrendra083@gmail.com">Email me</a
-    ><a class="btn" href="#experience">See my experience</a>
-  </div>
-
-  <svg
-    class="sld"
-    viewBox="0 0 900 150"
-    role="img"
-    aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
-  >
-    <path
-      class="w"
-      d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
-    ></path>
-    <circle class="w" cx="170" cy="60" r="20"></circle>
-    <circle class="w" cx="320" cy="60" r="20"></circle>
-    <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
-    <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
-    <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
-    <text x="20" y="40">132 kV</text>
-    <text x="140" y="108">Transformer</text>
-    <text x="290" y="108">Transformer</text>
-    <text x="440" y="142">LV/MV switchgear</text>
-    <text x="570" y="142">Distribution</text>
-    <text x="725" y="142">Earthing</text>
-  </svg>
-</header>
-<section id="experience">
-  <h2>Experience</h2>
-  <article class="job">
-    <div class="when">March 2026 – present</div>
-    <div>
-      <h3>Electrical Engineer</h3>
-      <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
-      <ul>
-        <li>
-          Coordinate and supervise MEP installation: electrical, HVAC, plumbing,
-          fire protection and ELV systems, to design specifications and
-          international standards.
-        </li>
-        <li>
-          Review shop drawings, material submittals and method statements across
-          active sites.
-        </li>
-        <li>
-          Inspect sites and resolve technical issues during installation to hold
-          quality and timelines.
-        </li>
-        <li>
-          Coordinate with architectural, structural and interior design teams.
-        </li>
-        <li>
-          Write progress and inspection reports, and attend coordination
-          meetings with stakeholders and consultants.
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="job">
-    <div class="when">August 2025 – March 2026</div>
-    <div>
-      <h3>Electrical Engineer</h3>
-      <p class="org">Clean Power T&amp;C, Lalitpur</p>
-      <ul>
-        <li>
-          Designed and oversaw electrical installations for commercial and
-          industrial projects, to national electrical codes and IEC/IEEE safety
-          standards.
-        </li>
-        <li>
-          Supervised contractors on electrical distribution systems, monitoring
-          quality and completion dates.
-        </li>
-        <li>
-          Prepared AutoCAD drawings, specifications and technical documentation.
-        </li>
-        <li>
-          Assessed electrical system performance on site and identified
-          improvements.
-        </li>
-        <li>
-          Worked with project managers, contractors and consultants to deliver
-          on schedule and within budget.
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="job">
-    <div class="when">May 2025 – August 2025</div>
-    <div>
-      <h3>High Voltage Testing Engineer (Internship)</h3>
-      <p class="org">Clean Power T&amp;C, Lalitpur</p>
-      <ul>
-        <li>
-          Ran testing and commissioning procedures for transformers, circuit
-          breakers and switchgear up to 132 kV.
-        </li>
-        <li>
-          Performed insulation resistance, turns ratio, winding resistance and
-          dielectric strength tests on power transformers.
-        </li>
-        <li>
-          Carried out circuit breaker timing tests, contact resistance
-          measurements and protection relay calibration.
-        </li>
-        <li>
-          Kept to IEC and IEEE safety protocols, and prepared technical reports
-          for regulatory compliance and handover to operations.
-        </li>
-      </ul>
-    </div>
-  </article>
-</section>
-<section id="testing">
-  <h2>High-voltage testing I have performed</h2>
-  <ul class="tests">
-    <li>Insulation resistance</li>
-    <li>Turns ratio</li>
-    <li>Winding resistance</li>
-    <li>Dielectric strength</li>
-    <li>Circuit breaker timing</li>
-    <li>Contact resistance</li>
-    <li>Protection relay calibration</li>
-    <li>Power quality analysis</li>
-  </ul>
-</section>
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="grid">
+  <section class="two reveal">
     <div class="box">
-      <h3>Software</h3>
-      <p>AutoCAD, ETAP, DIALux, MATLAB</p>
-    </div>
-    <div class="box">
-      <h3>Electrical systems</h3>
-      <p>
-        HV equipment testing, power distribution, earthing design, LV/MV
-        switchgear, lighting design
-      </p>
-    </div>
-    <div class="box">
-      <h3>MEP coordination</h3>
-      <p>
-        Electrical systems, HVAC coordination, fire protection, ELV systems, BMS
-        overview
-      </p>
-    </div>
-    <div class="box">
-      <h3>Testing and commissioning</h3>
-      <p>
-        Transformer testing, circuit breaker timing, insulation resistance,
-        relay calibration, power quality analysis
-      </p>
-    </div>
-    <div class="box">
-      <h3>Standards and codes</h3>
-      <p>
-        IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
-        regulations
-      </p>
-    </div>
-    <div class="box">
-      <h3>Documentation</h3>
-      <p>
-        Shop drawing review, material submittals, method statements, progress
-        reports, technical reports
-      </p>
-    </div>
-  </div>
-</section>
-<section id="education" class="edu">
-  <h2>Education</h2>
-  <h3>
-    Bachelor of Engineering, Electrical and Electronics (Power and Control)
-  </h3>
-  <p>Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.</p>
-</section>
-<div class="wrap">
-  <nav aria-label="Sections">
-    <a href="#about">About</a><a href="#experience">Experience</a
-    ><a href="#testing">Testing</a><a href="#skills">Skills</a
-    ><a href="#education">Education</a><a href="#contact">Contact</a>
-  </nav>
-
-  <header class="hero" id="about">
-    <h1>Amrendra Kumar Yadav</h1>
-    <p class="role">MEP engineer, electrical and power systems</p>
-    <p class="lede">
-      Electrical and Electronics Engineer in Kathmandu working across MEP
-      coordination, high-voltage equipment testing, commissioning and electrical
-      system design, on commercial and industrial projects. I work with
-      architects, structural engineers, contractors and consultants to deliver
-      on schedule and within budget.
-    </p>
-    <div class="btns">
-      <a class="btn main" href="mailto:yadavamrendra083@gmail.com">Email me</a
-      ><a class="btn" href="#experience">See my experience</a>
-    </div>
-
-    <svg
-      class="sld"
-      viewBox="0 0 900 150"
-      role="img"
-      aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
-    >
-      <path
-        class="w"
-        d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
-      ></path>
-      <circle class="w" cx="170" cy="60" r="20"></circle>
-      <circle class="w" cx="320" cy="60" r="20"></circle>
-      <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
-      <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
-      <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
-      <text x="20" y="40">132 kV</text>
-      <text x="140" y="108">Transformer</text>
-      <text x="290" y="108">Transformer</text>
-      <text x="440" y="142">LV/MV switchgear</text>
-      <text x="570" y="142">Distribution</text>
-      <text x="725" y="142">Earthing</text>
-    </svg>
-  </header>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <article class="job">
-      <div class="when">March 2026 – present</div>
       <div>
-        <h3>Electrical Engineer</h3>
-        <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
-        <ul>
-          <li>
-            Coordinate and supervise MEP installation: electrical, HVAC,
-            plumbing, fire protection and ELV systems, to design specifications
-            and international standards.
-          </li>
-          <li>
-            Review shop drawings, material submittals and method statements
-            across active sites.
-          </li>
-          <li>
-            Inspect sites and resolve technical issues during installation to
-            hold quality and timelines.
-          </li>
-          <li>
-            Coordinate with architectural, structural and interior design teams.
-          </li>
-          <li>
-            Write progress and inspection reports, and attend coordination
-            meetings with stakeholders and consultants.
-          </li>
-        </ul>
+        <h2>Skills</h2>
+        <!-- Bar levels are set in style="--w:NN%". Change the numbers to your own. -->
+        <div class="skill"><span class="t">Electrical Design</span><div class="track"><div class="bar" style="--w:85%"><span>AutoCAD, ETAP, DIALux</span><span>85%</span></div></div></div>
+        <div class="skill"><span class="t">Testing &amp; Commissioning</span><div class="track"><div class="bar" style="--w:90%"><span>Transformers, breakers, relays</span><span>90%</span></div></div></div>
+        <div class="skill"><span class="t">Power Systems</span><div class="track"><div class="bar" style="--w:85%"><span>LV/MV switchgear, distribution, earthing</span><span>85%</span></div></div></div>
+        <div class="skill"><span class="t">MEP Coordination</span><div class="track"><div class="bar" style="--w:80%"><span>HVAC, fire protection, ELV, BMS</span><span>80%</span></div></div></div>
+        <div class="skill"><span class="t">Standards &amp; Codes</span><div class="track"><div class="bar" style="--w:80%"><span>IEC, IEEE, NEC, Nepali Standards</span><span>80%</span></div></div></div>
+        <div class="skill"><span class="t">MATLAB &amp; Simulation</span><div class="track"><div class="bar" style="--w:75%"><span>Simulink, Arduino control</span><span>75%</span></div></div></div>
+        <div class="skill"><span class="t">Documentation</span><div class="track"><div class="bar" style="--w:85%"><span>Shop drawings, submittals, reports</span><span>85%</span></div></div></div>
       </div>
-    </article>
-    <article class="job">
-      <div class="when">August 2025 – March 2026</div>
       <div>
-        <h3>Electrical Engineer</h3>
-        <p class="org">Clean Power T&amp;C, Lalitpur</p>
-        <ul>
-          <li>
-            Designed and oversaw electrical installations for commercial and
-            industrial projects, to national electrical codes and IEC/IEEE
-            safety standards.
-          </li>
-          <li>
-            Supervised contractors on electrical distribution systems,
-            monitoring quality and completion dates.
-          </li>
-          <li>
-            Prepared AutoCAD drawings, specifications and technical
-            documentation.
-          </li>
-          <li>
-            Assessed electrical system performance on site and identified
-            improvements.
-          </li>
-          <li>
-            Worked with project managers, contractors and consultants to deliver
-            on schedule and within budget.
-          </li>
-        </ul>
-      </div>
-    </article>
-    <article class="job">
-      <div class="when">May 2025 – August 2025</div>
-      <div>
-        <h3>High Voltage Testing Engineer (Internship)</h3>
-        <p class="org">Clean Power T&amp;C, Lalitpur</p>
-        <ul>
-          <li>
-            Ran testing and commissioning procedures for transformers, circuit
-            breakers and switchgear up to 132 kV.
-          </li>
-          <li>
-            Performed insulation resistance, turns ratio, winding resistance and
-            dielectric strength tests on power transformers.
-          </li>
-          <li>
-            Carried out circuit breaker timing tests, contact resistance
-            measurements and protection relay calibration.
-          </li>
-          <li>
-            Kept to IEC and IEEE safety protocols, and prepared technical
-            reports for regulatory compliance and handover to operations.
-          </li>
-        </ul>
-      </div>
-    </article>
-  </section>
-
-  <section id="testing">
-    <h2>High-voltage testing I have performed</h2>
-    <ul class="tests">
-      <li>Insulation resistance</li>
-      <li>Turns ratio</li>
-      <li>Winding resistance</li>
-      <li>Dielectric strength</li>
-      <li>Circuit breaker timing</li>
-      <li>Contact resistance</li>
-      <li>Protection relay calibration</li>
-      <li>Power quality analysis</li>
-    </ul>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="box">
-        <h3>Software</h3>
-        <p>AutoCAD, ETAP, DIALux, MATLAB</p>
-      </div>
-      <div class="box">
-        <h3>Electrical systems</h3>
-        <p>
-          HV equipment testing, power distribution, earthing design, LV/MV
-          switchgear, lighting design
-        </p>
-      </div>
-      <div class="box">
-        <h3>MEP coordination</h3>
-        <p>
-          Electrical systems, HVAC coordination, fire protection, ELV systems,
-          BMS overview
-        </p>
-      </div>
-      <div class="box">
-        <h3>Testing and commissioning</h3>
-        <p>
-          Transformer testing, circuit breaker timing, insulation resistance,
-          relay calibration, power quality analysis
-        </p>
-      </div>
-      <div class="box">
-        <h3>Standards and codes</h3>
-        <p>
-          IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
-          regulations
-        </p>
-      </div>
-      <div class="box">
-        <h3>Documentation</h3>
-        <p>
-          Shop drawing review, material submittals, method statements, progress
-          reports, technical reports
-        </p>
+        <h2>My Experience</h2>
+        <div class="job">
+          <div><div class="when">March 2026 – Present</div><div class="org">Delight M and E Pvt. Ltd</div></div>
+          <div><h4>Electrical Engineer</h4><p>Coordinate and supervise MEP installation (electrical, HVAC, plumbing, fire protection, ELV). Review shop drawings, submittals and method statements, and inspect sites.</p></div>
+        </div>
+        <div class="job">
+          <div><div class="when">Aug 2025 – March 2026</div><div class="org">Clean Power T&amp;C</div></div>
+          <div><h4>Electrical Engineer</h4><p>Designed and oversaw electrical installations for commercial and industrial projects. Prepared AutoCAD drawings and specifications, and supervised contractors.</p></div>
+        </div>
+        <div class="job">
+          <div><div class="when">May 2025 – Aug 2025</div><div class="org">Clean Power T&amp;C</div></div>
+          <div><h4>High Voltage Testing Engineer (Internship)</h4><p>Testing and commissioning of transformers, circuit breakers and switchgear up to 132 kV, with technical reports for handover.</p></div>
+        </div>
+        <div class="job">
+          <div><div class="when">Dec 2020 – June 2025</div><div class="org">Kathmandu University</div></div>
+          <div><h4>B.E. Electrical &amp; Electronics (Power and Control)</h4><p>Final year project: power factor improvement using an FC-TCR system with Arduino-based control, validated in MATLAB Simulink.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="education" class="edu">
-    <h2>Education</h2>
-    <h3>
-      Bachelor of Engineering, Electrical and Electronics (Power and Control)
-    </h3>
-    <p>Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.</p>
+  <section class="projects reveal" id="projects">
+    <div class="box">
+      <h2>Projects</h2>
+      <div class="gallery">
+        <article class="card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h10l4-12 8 24 4-12h14"/></svg>
+          <h4>Power Factor Improvement</h4>
+          <p>FC-TCR system with Arduino-based control, validated in MATLAB Simulink.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M26 4L10 26h12l-2 18 18-24H26l0-16z"/></svg>
+          <h4>HV Testing &amp; Commissioning</h4>
+          <p>Transformers, circuit breakers and switchgear up to 132 kV.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V8h32v32H8zM8 20h32M20 8v32"/></svg>
+          <h4>MEP Electrical Design</h4>
+          <p>Circuit and load design, drawings and coordination for building projects.</p>
+        </article>
+      </div>
+    </div>
   </section>
-</div>
+</main>
+
 <footer id="contact">
-  <div class="wrap">
-    <h2>Contact</h2>
-    <div class="contact">
-      <a href="mailto:yadavamrendra083@gmail.com">yadavamrendra083@gmail.com</a>
-      <a href="tel:+9779844330025">+977-9844330025</a>
-      <span>Kathmandu, Nepal</span>
+  <div class="box">
+    <div class="grid">
+      <div>
+        <h2>Based in Kathmandu, Nepal.</h2>
+        <a class="get" href="mailto:yadavamrendra083@gmail.com">Get in touch</a>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a class="l" href="mailto:yadavamrendra083@gmail.com">yadavamrendra083@gmail.com</a></li>
+          <li><a class="l" href="tel:+9779844330025">+977-9844330025</a></li>
+          <li><a class="l" href="https://www.linkedin.com/in/amrendra-kumar-yadav-b743a4349" target="_blank" rel="noopener">linkedin.com/in/amrendra-kumar-yadav</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Links</h2>
+        <ul>
+          <li><a class="l" href="#about">About</a></li>
+          <li><a class="l" href="#projects">Projects</a></li>
+          <li><a class="l" href="https://www.linkedin.com/in/amrendra-kumar-yadav-b743a4349" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
-    <p class="small">References available on request.</p>
+    <p class="copy">© 2026 Amrendra Kumar Yadav. References available on request.</p>
   </div>
 </footer>
-<body>
-  <div class="wrap">
-    <nav aria-label="Sections">
-      <a href="#about">About</a><a href="#experience">Experience</a
-      ><a href="#testing">Testing</a><a href="#skills">Skills</a
-      ><a href="#education">Education</a><a href="#contact">Contact</a>
-    </nav>
 
-    <header class="hero" id="about">
-      <h1>Amrendra Kumar Yadav</h1>
-      <p class="role">MEP engineer, electrical and power systems</p>
-      <p class="lede">
-        Electrical and Electronics Engineer in Kathmandu working across MEP
-        coordination, high-voltage equipment testing, commissioning and
-        electrical system design, on commercial and industrial projects. I work
-        with architects, structural engineers, contractors and consultants to
-        deliver on schedule and within budget.
-      </p>
-      <div class="btns">
-        <a class="btn main" href="mailto:yadavamrendra083@gmail.com">Email me</a
-        ><a class="btn" href="#experience">See my experience</a>
-      </div>
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add('js');
 
-      <svg
-        class="sld"
-        viewBox="0 0 900 150"
-        role="img"
-        aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
-      >
-        <path
-          class="w"
-          d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
-        ></path>
-        <circle class="w" cx="170" cy="60" r="20"></circle>
-        <circle class="w" cx="320" cy="60" r="20"></circle>
-        <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
-        <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
-        <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
-        <text x="20" y="40">132 kV</text>
-        <text x="140" y="108">Transformer</text>
-        <text x="290" y="108">Transformer</text>
-        <text x="440" y="142">LV/MV switchgear</text>
-        <text x="570" y="142">Distribution</text>
-        <text x="725" y="142">Earthing</text>
-      </svg>
-    </header>
+  var items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } });
+    }, { threshold: 0.08 });
+    items.forEach(function (s) { io.observe(s); });
+  } else { items.forEach(function (s) { s.classList.add('in'); }); }
+  setTimeout(function () { items.forEach(function (s) { s.classList.add('in'); }); }, 2500);
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <article class="job">
-        <div class="when">March 2026 – present</div>
-        <div>
-          <h3>Electrical Engineer</h3>
-          <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
-          <ul>
-            <li>
-              Coordinate and supervise MEP installation: electrical, HVAC,
-              plumbing, fire protection and ELV systems, to design
-              specifications and international standards.
-            </li>
-            <li>
-              Review shop drawings, material submittals and method statements
-              across active sites.
-            </li>
-            <li>
-              Inspect sites and resolve technical issues during installation to
-              hold quality and timelines.
-            </li>
-            <li>
-              Coordinate with architectural, structural and interior design
-              teams.
-            </li>
-            <li>
-              Write progress and inspection reports, and attend coordination
-              meetings with stakeholders and consultants.
-            </li>
-          </ul>
-        </div>
-      </article>
-      <article class="job">
-        <div class="when">August 2025 – March 2026</div>
-        <div>
-          <h3>Electrical Engineer</h3>
-          <p class="org">Clean Power T&amp;C, Lalitpur</p>
-          <ul>
-            <li>
-              Designed and oversaw electrical installations for commercial and
-              industrial projects, to national electrical codes and IEC/IEEE
-              safety standards.
-            </li>
-            <li>
-              Supervised contractors on electrical distribution systems,
-              monitoring quality and completion dates.
-            </li>
-            <li>
-              Prepared AutoCAD drawings, specifications and technical
-              documentation.
-            </li>
-            <li>
-              Assessed electrical system performance on site and identified
-              improvements.
-            </li>
-            <li>
-              Worked with project managers, contractors and consultants to
-              deliver on schedule and within budget.
-            </li>
-          </ul>
-        </div>
-      </article>
-      <article class="job">
-        <div class="when">May 2025 – August 2025</div>
-        <div>
-          <h3>High Voltage Testing Engineer (Internship)</h3>
-          <p class="org">Clean Power T&amp;C, Lalitpur</p>
-          <ul>
-            <li>
-              Ran testing and commissioning procedures for transformers, circuit
-              breakers and switchgear up to 132 kV.
-            </li>
-            <li>
-              Performed insulation resistance, turns ratio, winding resistance
-              and dielectric strength tests on power transformers.
-            </li>
-            <li>
-              Carried out circuit breaker timing tests, contact resistance
-              measurements and protection relay calibration.
-            </li>
-            <li>
-              Kept to IEC and IEEE safety protocols, and prepared technical
-              reports for regulatory compliance and handover to operations.
-            </li>
-          </ul>
-        </div>
-      </article>
-    </section>
+  var sld = document.getElementById('sld'), trip = document.getElementById('trip'), status = document.getElementById('status');
+  trip.addEventListener('click', function () {
+    var off = sld.classList.toggle('off');
+    trip.textContent = off ? 'Close the breaker' : 'Trip the breaker';
+    trip.setAttribute('aria-pressed', off ? 'true' : 'false');
+    status.textContent = off ? 'De-energized · 0 V' : 'Energized · 132 kV';
+  });
 
-    <section id="testing">
-      <h2>High-voltage testing I have performed</h2>
-      <ul class="tests">
-        <li>Insulation resistance</li>
-        <li>Turns ratio</li>
-        <li>Winding resistance</li>
-        <li>Dielectric strength</li>
-        <li>Circuit breaker timing</li>
-        <li>Contact resistance</li>
-        <li>Protection relay calibration</li>
-        <li>Power quality analysis</li>
-      </ul>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="grid">
-        <div class="box">
-          <h3>Software</h3>
-          <p>AutoCAD, ETAP, DIALux, MATLAB</p>
-        </div>
-        <div class="box">
-          <h3>Electrical systems</h3>
-          <p>
-            HV equipment testing, power distribution, earthing design, LV/MV
-            switchgear, lighting design
-          </p>
-        </div>
-        <div class="box">
-          <h3>MEP coordination</h3>
-          <p>
-            Electrical systems, HVAC coordination, fire protection, ELV systems,
-            BMS overview
-          </p>
-        </div>
-        <div class="box">
-          <h3>Testing and commissioning</h3>
-          <p>
-            Transformer testing, circuit breaker timing, insulation resistance,
-            relay calibration, power quality analysis
-          </p>
-        </div>
-        <div class="box">
-          <h3>Standards and codes</h3>
-          <p>
-            IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
-            regulations
-          </p>
-        </div>
-        <div class="box">
-          <h3>Documentation</h3>
-          <p>
-            Shop drawing review, material submittals, method statements,
-            progress reports, technical reports
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="edu">
-      <h2>Education</h2>
-      <h3>
-        Bachelor of Engineering, Electrical and Electronics (Power and Control)
-      </h3>
-      <p>Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.</p>
-    </section>
-  </div>
-
-  <footer id="contact">
-    <div class="wrap">
-      <h2>Contact</h2>
-      <div class="contact">
-        <a href="mailto:yadavamrendra083@gmail.com"
-          >yadavamrendra083@gmail.com</a
-        >
-        <a href="tel:+9779844330025">+977-9844330025</a>
-        <span>Kathmandu, Nepal</span>
-      </div>
-      <p class="small">References available on request.</p>
-    </div>
-  </footer>
+  var links = document.querySelectorAll('header nav a');
+  links.forEach(function (a) { a.addEventListener('click', function () { links.forEach(function (b) { b.classList.remove('cur'); }); a.classList.add('cur'); }); });
+})();
+</script>
+<script>
+/* embeds the photo so this single file works on its own */
+(function(){var d=[
+"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"
+].join("");document.getElementById("me").src="data:image/jpeg;base64,"+d;})();
+</script>
 </body>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>Amrendra Kumar Yadav – MEP &amp; Electrical Power Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bg: #eef2f5;
-        --surface: #ffffff;
-        --ink: #14293d;
-        --muted: #51647a;
-        --line: #c9d4de;
-        --accent: #1c4fd6;
-        --hot: #e8a800;
-        box-sizing: border-box;
-        padding-top: env(safe-area-inset-top, 0px);
-        padding-bottom: env(safe-area-inset-bottom, 0px);
-        color-scheme: light;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root:not([data-theme="light"]) {
-          --bg: #0e1824;
-          --surface: #15243436;
-          --ink: #e6edf4;
-          --muted: #9fb0c2;
-          --line: #2a3d52;
-          --accent: #7ea2ff;
-          --hot: #ffc531;
-          color-scheme: dark;
-        }
-      }
-      :root[data-theme="dark"] {
-        --bg: #0e1824;
-        --surface: #15243436;
-        --ink: #e6edf4;
-        --muted: #9fb0c2;
-        --line: #2a3d52;
-        --accent: #7ea2ff;
-        --hot: #ffc531;
-        color-scheme: dark;
-      }
-      html {
-        scroll-padding-top: env(safe-area-inset-top, 0px);
-        scroll-behavior: smooth;
-      }
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--ink);
-        font:
-          17px/1.65 "IBM Plex Sans",
-          system-ui,
-          sans-serif;
-      }
-      h1,
-      h2,
-      h3 {
-        font-family: "Bricolage Grotesque", "IBM Plex Sans", sans-serif;
-        line-height: 1.1;
-        margin: 0;
-      }
-      a {
-        color: var(--accent);
-      }
-      :focus-visible {
-        outline: 3px solid var(--hot);
-        outline-offset: 3px;
-      }
-      .wrap {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
-      nav {
-        display: flex;
-        gap: 22px;
-        flex-wrap: wrap;
-        padding: 20px 0;
-        font-weight: 500;
-        font-size: 15px;
-      }
-      nav a {
-        color: var(--muted);
-        text-decoration: none;
-      }
-      nav a:hover {
-        color: var(--ink);
-      }
-      .hero {
-        padding: 48px 0 56px;
-      }
-      .hero h1 {
-        font-size: clamp(2.6rem, 8vw, 5.4rem);
-        font-weight: 800;
-        letter-spacing: -0.03em;
-        max-width: 12ch;
-      }
-      .hero p.role {
-        font-family: "Bricolage Grotesque", sans-serif;
-        font-size: clamp(1.2rem, 3vw, 1.7rem);
-        font-weight: 500;
-        color: var(--accent);
-        margin: 18px 0 0;
-      }
-      .hero p.lede {
-        max-width: 60ch;
-        color: var(--muted);
-        margin: 18px 0 28px;
-      }
-      .btns {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-      }
-      .btn {
-        display: inline-block;
-        padding: 12px 22px;
-        border-radius: 6px;
-        font-weight: 500;
-        text-decoration: none;
-        border: 2px solid var(--ink);
-        color: var(--ink);
-      }
-      .btn.main {
-        background: var(--ink);
-        color: var(--bg);
-      }
-      /* single-line diagram: the one memorable element */
-      .sld {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin-top: 44px;
-        color: var(--ink);
-      }
-      .sld .w {
-        stroke: currentColor;
-        stroke-width: 2.5;
-        fill: none;
-        stroke-dasharray: 1200;
-        stroke-dashoffset: 1200;
-        animation: draw 2.4s ease-out 0.2s forwards;
-      }
-      .sld .p {
-        fill: var(--hot);
-        opacity: 0;
-        animation: on 0.4s ease-out 2.3s forwards;
-      }
-      .sld text {
-        font:
-          500 13px "IBM Plex Sans",
-          sans-serif;
-        fill: var(--muted);
-      }
-      @keyframes draw {
-        to {
-          stroke-dashoffset: 0;
-        }
-      }
-      @keyframes on {
-        to {
-          opacity: 1;
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .sld .w {
-          animation: none;
-          stroke-dashoffset: 0;
-        }
-        .sld .p {
-          animation: none;
-          opacity: 1;
-        }
-        html {
-          scroll-behavior: auto;
-        }
-      }
-      section {
-        padding: 56px 0;
-        border-top: 1px solid var(--line);
-      }
-      h2 {
-        font-size: clamp(1.7rem, 4vw, 2.4rem);
-        font-weight: 700;
-        margin-bottom: 28px;
-      }
-      .job {
-        display: grid;
-        grid-template-columns: 200px 1fr;
-        gap: 12px 32px;
-        padding: 0 0 36px;
-        margin-bottom: 36px;
-        border-bottom: 1px solid var(--line);
-      }
-      .job:last-child {
-        border: 0;
-        margin: 0;
-        padding: 0;
-      }
-      .job .when {
-        color: var(--muted);
-        font-size: 15px;
-      }
-      .job h3 {
-        font-size: 1.35rem;
-        margin-bottom: 2px;
-      }
-      .job .org {
-        color: var(--accent);
-        font-weight: 500;
-        margin: 0 0 12px;
-      }
-      ul {
-        margin: 0;
-        padding-left: 1.1em;
-      }
-      li {
-        margin: 0 0 8px;
-        max-width: 68ch;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-      }
-      .box {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 6px;
-        padding: 22px;
-      }
-      .box h3 {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-      }
-      .box p,
-      .box ul {
-        margin: 0;
-        color: var(--muted);
-        font-size: 16px;
-      }
-      .tests {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-      .tests li {
-        margin: 0;
-        padding: 8px 14px;
-        border: 1px solid var(--line);
-        border-left: 4px solid var(--hot);
-        border-radius: 4px;
-        background: var(--surface);
-        max-width: none;
-        font-size: 15px;
-      }
-      .edu h3 {
-        font-size: 1.3rem;
-      }
-      .edu p {
-        margin: 6px 0 0;
-        color: var(--muted);
-      }
-      footer {
-        padding: 56px 0 64px;
-        border-top: 1px solid var(--line);
-      }
-      footer h2 {
-        margin-bottom: 14px;
-      }
-      .contact {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px 32px;
-        font-size: 1.1rem;
-      }
-      .small {
-        color: var(--muted);
-        font-size: 14px;
-        margin-top: 36px;
-      }
-      @media (max-width: 700px) {
-        .job {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <nav aria-label="Sections">
-        <a href="#about">About</a><a href="#experience">Experience</a
-        ><a href="#testing">Testing</a><a href="#skills">Skills</a
-        ><a href="#education">Education</a><a href="#contact">Contact</a>
-      </nav>
-
-      <header class="hero" id="about">
-        <h1>Amrendra Kumar Yadav</h1>
-        <p class="role">MEP engineer, electrical and power systems</p>
-        <p class="lede">
-          Electrical and Electronics Engineer in Kathmandu working across MEP
-          coordination, high-voltage equipment testing, commissioning and
-          electrical system design, on commercial and industrial projects. I
-          work with architects, structural engineers, contractors and
-          consultants to deliver on schedule and within budget.
-        </p>
-        <div class="btns">
-          <a class="btn main" href="mailto:yadavamrendra083@gmail.com"
-            >Email me</a
-          ><a class="btn" href="#experience">See my experience</a>
-        </div>
-
-        <svg
-          class="sld"
-          viewBox="0 0 900 150"
-          role="img"
-          aria-label="Single-line diagram from a 132 kV source through a transformer and breaker to loads"
-        >
-          <path
-            class="w"
-            d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"
-          ></path>
-          <circle class="w" cx="170" cy="60" r="20"></circle>
-          <circle class="w" cx="320" cy="60" r="20"></circle>
-          <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
-          <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
-          <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
-          <text x="20" y="40">132 kV</text>
-          <text x="140" y="108">Transformer</text>
-          <text x="290" y="108">Transformer</text>
-          <text x="440" y="142">LV/MV switchgear</text>
-          <text x="570" y="142">Distribution</text>
-          <text x="725" y="142">Earthing</text>
-        </svg>
-      </header>
-
-      <section id="experience">
-        <h2>Experience</h2>
-        <article class="job">
-          <div class="when">March 2026 – present</div>
-          <div>
-            <h3>Electrical Engineer</h3>
-            <p class="org">Delight M and E Pvt. Ltd, Kathmandu</p>
-            <ul>
-              <li>
-                Coordinate and supervise MEP installation: electrical, HVAC,
-                plumbing, fire protection and ELV systems, to design
-                specifications and international standards.
-              </li>
-              <li>
-                Review shop drawings, material submittals and method statements
-                across active sites.
-              </li>
-              <li>
-                Inspect sites and resolve technical issues during installation
-                to hold quality and timelines.
-              </li>
-              <li>
-                Coordinate with architectural, structural and interior design
-                teams.
-              </li>
-              <li>
-                Write progress and inspection reports, and attend coordination
-                meetings with stakeholders and consultants.
-              </li>
-            </ul>
-          </div>
-        </article>
-        <article class="job">
-          <div class="when">August 2025 – March 2026</div>
-          <div>
-            <h3>Electrical Engineer</h3>
-            <p class="org">Clean Power T&amp;C, Lalitpur</p>
-            <ul>
-              <li>
-                Designed and oversaw electrical installations for commercial and
-                industrial projects, to national electrical codes and IEC/IEEE
-                safety standards.
-              </li>
-              <li>
-                Supervised contractors on electrical distribution systems,
-                monitoring quality and completion dates.
-              </li>
-              <li>
-                Prepared AutoCAD drawings, specifications and technical
-                documentation.
-              </li>
-              <li>
-                Assessed electrical system performance on site and identified
-                improvements.
-              </li>
-              <li>
-                Worked with project managers, contractors and consultants to
-                deliver on schedule and within budget.
-              </li>
-            </ul>
-          </div>
-        </article>
-        <article class="job">
-          <div class="when">May 2025 – August 2025</div>
-          <div>
-            <h3>High Voltage Testing Engineer (Internship)</h3>
-            <p class="org">Clean Power T&amp;C, Lalitpur</p>
-            <ul>
-              <li>
-                Ran testing and commissioning procedures for transformers,
-                circuit breakers and switchgear up to 132 kV.
-              </li>
-              <li>
-                Performed insulation resistance, turns ratio, winding resistance
-                and dielectric strength tests on power transformers.
-              </li>
-              <li>
-                Carried out circuit breaker timing tests, contact resistance
-                measurements and protection relay calibration.
-              </li>
-              <li>
-                Kept to IEC and IEEE safety protocols, and prepared technical
-                reports for regulatory compliance and handover to operations.
-              </li>
-            </ul>
-          </div>
-        </article>
-      </section>
-
-      <section id="testing">
-        <h2>High-voltage testing I have performed</h2>
-        <ul class="tests">
-          <li>Insulation resistance</li>
-          <li>Turns ratio</li>
-          <li>Winding resistance</li>
-          <li>Dielectric strength</li>
-          <li>Circuit breaker timing</li>
-          <li>Contact resistance</li>
-          <li>Protection relay calibration</li>
-          <li>Power quality analysis</li>
-        </ul>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="grid">
-          <div class="box">
-            <h3>Software</h3>
-            <p>AutoCAD, ETAP, DIALux, MATLAB</p>
-          </div>
-          <div class="box">
-            <h3>Electrical systems</h3>
-            <p>
-              HV equipment testing, power distribution, earthing design, LV/MV
-              switchgear, lighting design
-            </p>
-          </div>
-          <div class="box">
-            <h3>MEP coordination</h3>
-            <p>
-              Electrical systems, HVAC coordination, fire protection, ELV
-              systems, BMS overview
-            </p>
-          </div>
-          <div class="box">
-            <h3>Testing and commissioning</h3>
-            <p>
-              Transformer testing, circuit breaker timing, insulation
-              resistance, relay calibration, power quality analysis
-            </p>
-          </div>
-          <div class="box">
-            <h3>Standards and codes</h3>
-            <p>
-              IEC, IEEE, NEC, Nepali Electrical Standards, electrical safety
-              regulations
-            </p>
-          </div>
-          <div class="box">
-            <h3>Documentation</h3>
-            <p>
-              Shop drawing review, material submittals, method statements,
-              progress reports, technical reports
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="education" class="edu">
-        <h2>Education</h2>
-        <h3>
-          Bachelor of Engineering, Electrical and Electronics (Power and
-          Control)
-        </h3>
-        <p>
-          Kathmandu University, Dhulikhel, Nepal. December 2020 – June 2025.
-        </p>
-      </section>
-    </div>
-
-    <footer id="contact">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <div class="contact">
-          <a href="mailto:yadavamrendra083@gmail.com"
-            >yadavamrendra083@gmail.com</a
-          >
-          <a href="tel:+9779844330025">+977-9844330025</a>
-          <span>Kathmandu, Nepal</span>
-        </div>
-        <p class="small">References available on request.</p>
-      </div>
-    </footer>
-  </body>
 </html>
