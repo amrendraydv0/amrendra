@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Amrendra Kumar Yadav – MEP &amp; Electrical Power Engineer</title>
-<meta name="description" content="Amrendra Kumar Yadav is an electrical and MEP engineer in Kathmandu, working on design, installation, testing and commissioning." />
+<title data-ja="Amrendra Kumar Yadav – MEP・電力エンジニア">Amrendra Kumar Yadav – MEP &amp; Electrical Power Engineer</title>
+<meta name="description" content="Amrendra Kumar Yadav is an electrical and MEP engineer in Kathmandu, working on design, installation, testing and commissioning." data-ja-content="Amrendra Kumar Yadavはカトマンズを拠点とする電気・MEPエンジニアで、設計、施工、試験、試運転に携わっています。" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&amp;family=Playfair+Display:wght@500;800&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&amp;family=Playfair+Display:wght@500;800&amp;family=Noto+Sans+JP:wght@400;500&amp;family=Noto+Serif+JP:wght@600;900&amp;display=swap" rel="stylesheet" />
 <style>
   :root {
     --accent: #009bdf; --ink: #000000; --grey: #758398; --pale: #f6f8fa;
@@ -17,9 +17,9 @@
   }
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; font-size: 106.25%; }
-  body { margin: 0; background: var(--pale); color: var(--grey); font: 400 1rem/1.65 "Barlow Semi Condensed", sans-serif; }
-  h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 800; color: var(--ink); margin: 0; }
-  h4, h6 { font-family: "Barlow Semi Condensed", sans-serif; margin: 0; }
+  body { margin: 0; background: var(--pale); color: var(--grey); font: 400 1rem/1.65 "Barlow Semi Condensed", "Noto Sans JP", sans-serif; }
+  h1, h2, h3 { font-family: "Playfair Display", "Noto Serif JP", Georgia, serif; font-weight: 800; color: var(--ink); margin: 0; }
+  h4, h6 { font-family: "Barlow Semi Condensed", "Noto Sans JP", sans-serif; margin: 0; }
   a { color: var(--ink); text-decoration: none; }
   a:hover { color: var(--accent); }
   :focus-visible { outline: 2px dotted var(--accent); outline-offset: 3px; }
@@ -28,12 +28,12 @@
   /* header (transparent over hero) */
   header.top { position: absolute; top: 0; left: 0; right: 0; z-index: 10; }
   header.top .box { display: flex; align-items: center; justify-content: space-between; min-height: 70px; gap: 16px; flex-wrap: wrap; }
-  .logo { width: 56px; height: 56px; border-radius: 50%; background: var(--navy); color: var(--white); display: grid; place-items: center; font: 800 1.05rem "Playfair Display", serif; letter-spacing: .02em; }
+  .logo { width: 56px; height: 56px; border-radius: 50%; background: var(--navy); color: var(--white); display: grid; place-items: center; font: 800 1.05rem "Playfair Display", "Noto Serif JP", serif; letter-spacing: .02em; }
   .logo:hover { color: var(--white); background: var(--accent); }
   header nav { display: flex; gap: 32px; flex-wrap: wrap; }
   header nav a { text-transform: uppercase; font-weight: 500; letter-spacing: .04em; position: relative; padding: 6px 0; }
-  header nav a::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 1px; background: currentColor; transform: scale(0, 1); transition: transform .3s; }
-  header nav a:hover::before, header nav a.cur::before { transform: scale(1, 1); }
+  header nav a::before { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .5s var(--ease-ul); }
+  header nav a:hover::before, header nav a:focus-visible::before, header nav a.cur::before { transform: scaleX(1); transform-origin: left; }
   header nav a.cur { color: var(--accent); }
 
   h6.kicker { font-size: 1rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--grey); }
@@ -54,34 +54,64 @@
   .about .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
   .about h3 { font-size: clamp(1.4rem, 2.6vw, 2.06rem); line-height: 1.3; }
   .about p { margin: 0 0 18px; }
-  .btn { display: inline-block; margin-top: 8px; text-transform: uppercase; letter-spacing: 2px; font-weight: 500; font-size: .94rem; color: var(--accent); border-bottom: 2px solid transparent; padding: 4px 0; }
-  .btn:hover { color: var(--ink); border-color: var(--accent); }
+  .btn { display: inline-block; margin-top: 8px; text-transform: uppercase; letter-spacing: 2px; font-weight: 500; font-size: .94rem; color: var(--accent); padding: 4px 0; }
+  .btn:hover { color: var(--ink); }
 
-  /* defines */
-  .defines { padding: 100px 0; background: var(--navy); color: var(--sky); }
-  .defines h2 { color: var(--white); font-size: clamp(2rem, 4.5vw, 2.94rem); display: inline-block; }
-  .defines .lead { max-width: 52ch; margin: 22px 0 14px; font-size: 1.15rem; color: var(--sky); }
-  .arrow { display: inline-block; width: 48px; margin-left: 18px; vertical-align: middle; color: var(--white); transition: transform .25s; }
+  /* defines (same look as the About page) */
+  .defines { padding: 100px 0; background: var(--pale); }
+  .defines h2 { font-size: clamp(2rem, 4.5vw, 2.94rem); display: inline-block; }
+  .defines .lead { max-width: 56ch; margin: 18px 0 0; font-size: 1.05rem; }
+  .arrow { display: inline-block; width: 48px; margin-left: 18px; vertical-align: middle; color: var(--ink); transition: transform .25s, color .25s; }
   .arrow:hover { transform: translateX(6px); color: var(--accent); }
-  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 56px; }
-  .item { display: grid; grid-template-columns: 48px 1fr; gap: 18px; }
-  .item svg { width: 44px; height: 44px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .item h4 { color: var(--white); font-size: 1.3rem; font-weight: 500; margin-bottom: 6px; }
-  .item p { margin: 0; color: var(--sky); }
+  .defs { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 56px; }
+  .defs .it { padding: 8px 70px 44px 28px; border-left: 1px solid #e1e6ee; }
+  .defs .it:nth-child(3n+1) { border-left: 0; padding-left: 0; }
+  .defs .it:nth-child(3n) { border-right: 1px solid #e1e6ee; }
+  .it .h { display: flex; align-items: center; gap: 18px; margin-bottom: 16px; }
+  .it .h svg { width: 30px; height: 30px; fill: var(--accent); flex: none; }
+  .it h4 { font-size: 1.4rem; font-weight: 400; text-transform: uppercase; color: var(--ink); }
+  .it p { margin: 0 0 0 48px; line-height: 2; color: var(--grey); }
 
   /* band with diagram */
   .band { background: var(--ink); padding: 56px 0 44px; color: var(--white); }
-  .sld { width: 100%; height: auto; display: block; color: var(--white); }
-  .sld .w { stroke: currentColor; stroke-width: 2.5; fill: none; stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: draw 2.4s ease-out .2s forwards; transition: stroke .4s; }
-  .sld .p { fill: var(--accent); opacity: 0; animation: on .4s ease-out 2.3s forwards; transition: fill .4s; }
-  .sld text { font: 500 13px "Barlow Semi Condensed", sans-serif; fill: var(--sky); transition: opacity .4s; }
-  .sld.off .w { stroke: #444; } .sld.off .p { fill: #444; } .sld.off text { opacity: .5; }
-  @keyframes draw { to { stroke-dashoffset: 0; } }
-  @keyframes on { to { opacity: 1; } }
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .sld { width: 100%; min-width: 620px; height: auto; display: block; overflow: visible; }
+  /* dark wires (circuit off) */
+  .sld .w { stroke: #3d424b; stroke-width: 3; fill: none; }
+  /* bright wires drawn over them, one segment after another */
+  .sld .e { stroke: #eaf4ff; stroke-width: 3; fill: none; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset .25s linear; }
+  .sld.on .e { stroke-dashoffset: 0; transition: stroke-dashoffset var(--t, .4s) linear var(--d, 0s); }
+  .sld .dot { fill: #3d424b; transition: fill .2s; }
+  .sld.on .dot { fill: var(--white); transition: fill .3s .3s; }
+  .sld .node { fill: #3d424b; transition: fill .2s; }
+  .sld.on .node { fill: var(--accent); transition: fill .4s var(--d, 0s); }
+  /* breaker blade: snaps open on trip, swings shut on close */
+  .sld .blade { stroke: #8a909a; stroke-width: 4; stroke-linecap: round; transform-origin: 80px 60px; transform: rotate(-30deg); transition: transform .18s ease-in, stroke .2s; }
+  .sld.on .blade { transform: rotate(0deg); stroke: var(--white); transition: transform .5s cubic-bezier(.3, 1.5, .5, 1), stroke .3s; }
+  .sld .spark { fill: none; stroke: var(--accent); stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; }
+  .sld.on .spark { animation: spark .7s ease-out .3s 1 both; }
+  /* soft glow behind the energized parts */
+  .sld .halo { fill: var(--accent); opacity: 0; filter: url(#soft); }
+  .sld.on .halo { animation: breathe 2.6s ease-in-out var(--d, 1s) infinite alternate; }
+  /* current dots (moved by script) */
+  .sld .dots { opacity: 0; transition: opacity .2s; }
+  .sld .dots.show { opacity: 1; transition: opacity .8s; }
+  .sld .dots .glow { fill: var(--accent); opacity: .3; }
+  .sld .dots .core { fill: #dff3ff; }
+  /* texts: hidden until energized */
+  .sld text { font: 500 18px "Barlow Semi Condensed", "Noto Sans JP", sans-serif; fill: var(--sky); }
+  .sld .lbl, .sld .src { opacity: 0; visibility: hidden; transform: translateY(16px); transition: opacity .2s, transform .2s, visibility 0s .2s; }
+  .sld.on .lbl, .sld.on .src { opacity: 1; visibility: visible; transform: none; transition: opacity .8s cubic-bezier(.2, .7, .2, 1) var(--d, .9s), transform .8s cubic-bezier(.2, .7, .2, 1) var(--d, .9s), visibility 0s var(--d, .9s); }
+  .sld .lbl a { cursor: pointer; }
+  .sld .lbl text { fill: var(--white); font-size: 19px; transition: fill .2s; }
+  .sld .lbl a:hover text, .sld .lbl a:focus-visible text { fill: var(--accent); text-decoration: underline; }
+  .sld .lbl a:focus-visible { outline: none; }
+  @keyframes breathe { from { opacity: 0; } to { opacity: .5; } }
+  @keyframes spark { from { transform: scale(.4); opacity: 1; } to { transform: scale(3.2); opacity: 0; } }
   .trip-row { display: flex; align-items: center; gap: 16px; margin-top: 18px; flex-wrap: wrap; }
-  .trip { font: inherit; text-transform: uppercase; letter-spacing: 2px; font-size: .9rem; color: var(--white); background: transparent; border: 1px solid var(--white); padding: 10px 20px; border-radius: 2px; cursor: pointer; }
+  .trip { font: inherit; text-transform: uppercase; letter-spacing: 2px; font-size: .9rem; color: var(--white); background: transparent; border: 1px solid var(--white); padding: 10px 20px; border-radius: 2px; cursor: pointer; transition: background .2s, border-color .2s; }
   .trip:hover { background: var(--accent); border-color: var(--accent); }
-  #status { color: var(--sky); font-size: .95rem; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
   /* skills + experience */
   .two { padding: 110px 0; background: var(--pale); }
@@ -105,26 +135,54 @@
   /* projects */
   .projects { padding: 100px 0 110px; background: var(--white); }
   .projects h2 { display: inline-block; font-size: clamp(2rem, 4.5vw, 2.94rem); }
-  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 44px; }
-  .card { aspect-ratio: 9/14; border-radius: 2px; padding: 28px; display: flex; flex-direction: column; justify-content: flex-end; color: var(--white); position: relative; overflow: hidden; background: linear-gradient(160deg, var(--navy), #0f1a3c); transition: transform .3s; }
-  .card:nth-child(2) { background: linear-gradient(160deg, #0b6fa0, #0a3f66); }
-  .card:nth-child(3) { background: linear-gradient(160deg, #1b2a52, #070b1a); }
-  .card:hover { transform: translateY(-6px); }
-  .card svg { position: absolute; top: 28px; left: 28px; width: 56px; height: 56px; stroke: var(--sky); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-  .card h4 { font: 800 1.6rem/1.2 "Playfair Display", serif; margin-bottom: 8px; }
-  .card p { margin: 0; color: var(--sky); font-size: .98rem; }
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 44px; }
+  .card { aspect-ratio: 5/4; border-radius: 4px; padding: 28px 30px; display: flex; flex-direction: column; justify-content: flex-end; color: var(--white); position: relative; overflow: hidden; background: var(--navy); transition: transform .3s, box-shadow .3s; }
+  .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(36, 54, 115, .25); }
+  .card .art { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(7, 11, 30, .92) 0%, rgba(7, 11, 30, .55) 26%, rgba(7, 11, 30, 0) 52%); pointer-events: none; }
+  .card h4, .card p { position: relative; z-index: 1; }
+  .card h4 { font: 800 1.7rem/1.2 "Playfair Display", "Noto Serif JP", serif; color: var(--white); margin-bottom: 8px; }
+  .card p { margin: 0; color: var(--sky); font-size: 1.02rem; max-width: 44ch; }
 
   /* footer */
   footer { background: var(--white); border-top: 1px solid rgba(8,63,135,.08); padding: 60px 0 40px; }
-  footer .grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
-  footer h2 { font: 500 1.4rem "Barlow Semi Condensed", sans-serif; color: var(--ink); margin-bottom: 14px; }
-  footer .get { font: 800 clamp(2rem, 4.5vw, 3rem) "Playfair Display", serif; text-decoration: underline; color: var(--ink); }
+  footer .grid { display: grid; grid-template-columns: 1fr auto auto auto; gap: 40px 70px; }
+  footer h3.fh { font: 800 1.6rem "Playfair Display", "Noto Serif JP", serif; color: var(--ink); margin: 0 0 18px; }
+  footer h2 { font: 500 1.4rem "Barlow Semi Condensed", "Noto Sans JP", sans-serif; color: var(--ink); margin-bottom: 14px; }
+  footer .get { font: 800 clamp(2rem, 4.5vw, 3rem) "Playfair Display", "Noto Serif JP", serif; text-decoration: underline; color: var(--ink); }
   footer .get:hover { color: var(--accent); }
   footer ul { list-style: none; margin: 0; padding: 0; }
   footer li { margin: 0 0 8px; }
+  .resume { display: inline-block; margin-top: 10px; padding: 10px 18px; border: 1px solid var(--accent); color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; font-size: .9rem; font-weight: 500; border-radius: 2px; transition: background .2s, color .2s; }
+  .resume:hover { background: var(--accent); color: var(--white); }
   footer a.l { color: var(--grey); } footer a.l:hover { color: var(--accent); }
   .copy { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(8,63,135,.08); font-size: .95rem; }
 
+  /* language switch */
+  .lang { display: inline-flex; border: 1px solid rgba(0, 0, 0, .25); border-radius: 999px; overflow: hidden; margin-left: 8px; }
+  .lang button { font: inherit; font-size: .85rem; font-weight: 500; letter-spacing: .04em; padding: 4px 13px; border: 0; background: transparent; color: var(--ink); cursor: pointer; transition: background .25s, color .25s; }
+  .lang button:hover { color: var(--accent); }
+  .lang button[aria-pressed="true"] { background: var(--navy); color: var(--white); cursor: default; }
+  html[lang="ja"] body { line-break: strict; }
+  html[lang="ja"] p { text-wrap: pretty; }
+  html[lang="ja"] .about h2 { max-width: 22em; font-size: clamp(1.6rem, 3.2vw, 2.4rem); }
+  html[lang="ja"] .defines .lead { max-width: 40em; }
+  html[lang="ja"] .job { grid-template-columns: 210px 1fr; }
+  html[lang="ja"] .job .when { letter-spacing: 0; white-space: nowrap; }
+  html[lang="ja"] .def .lead { max-width: 40em; }
+  html[lang="ja"] .defs .it { padding-right: 36px; }
+  html[lang="ja"] footer a.get { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+  /* text underline animation: line draws in from the left, leaves to the right */
+  :root { --ease-ul: cubic-bezier(.65, .05, 0, 1); }
+  footer a.l, .btn { position: relative; display: inline-block; }
+  .btn::after, footer a.l::after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .5s var(--ease-ul); }
+  .btn::after { height: 2px; }
+  .btn:hover::after, .btn:focus-visible::after, footer a.l:hover::after, footer a.l:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+  footer a.get { position: relative; display: inline-block; text-decoration: none; }
+  footer a.get::after { content: ""; position: absolute; left: 0; bottom: 4px; width: 100%; height: 4px; background: currentColor; transform-origin: left; }
+  footer a.get:hover::after, footer a.get:focus-visible::after { animation: ul-swipe .8s var(--ease-ul); }
+  @keyframes ul-swipe { 0% { transform: scaleX(1); transform-origin: right; } 49.9% { transform: scaleX(0); transform-origin: right; } 50% { transform: scaleX(0); transform-origin: left; } 100% { transform: scaleX(1); transform-origin: left; } }
+  @media (prefers-reduced-motion: reduce) { header nav a::before, .btn::after, footer a.l::after { transition: none; } footer a.get:hover::after, footer a.get:focus-visible::after { animation: none; } }
   .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s, transform .7s; }
   .js .reveal.in { opacity: 1; transform: none; }
 
@@ -133,13 +191,15 @@
     .hero figure { order: -1; } .hero figure img { width: min(100%, 320px); }
     .hero { padding-top: 140px; min-height: auto; }
     .about .cols, .two .box, footer .grid { grid-template-columns: 1fr; gap: 36px; }
-    .three, .gallery { grid-template-columns: 1fr; }
-    .card { aspect-ratio: 16/10; }
+    .gallery { grid-template-columns: 1fr; }
+    .card { aspect-ratio: 4/3; }
+    .defs { grid-template-columns: 1fr; }
+    .defs .it, .defs .it:nth-child(n) { border: 0; padding: 18px 0; }
     header nav { gap: 20px; }
   }
   @media (max-width: 544px) { .job { grid-template-columns: 1fr; gap: 4px; } }
   @media (prefers-reduced-motion: reduce) {
-    .sld .w { animation: none; stroke-dashoffset: 0; } .sld .p { animation: none; opacity: 1; }
+    .sld .w { animation: none; stroke-dashoffset: 0; } .sld .e, .sld .lbl, .sld .src, .sld .blade, .sld.on .lbl, .sld.on .src, .sld.on .e, .sld.on .blade { transition: none; } .sld.on .halo { animation: none; opacity: .3; } .sld.on .spark, .sld .dots { display: none; }
     html { scroll-behavior: auto; } .js .reveal { opacity: 1; transform: none; transition: none; }
     .js .skill .bar { width: var(--w); transition: none; }
   }
@@ -149,12 +209,16 @@
 
 <header class="top">
   <div class="box">
-    <a class="logo" href="#home" aria-label="Home">AKY</a>
+    <a class="logo" href="#home" aria-label="Home" data-ja-aria-label="ホーム">AKY</a>
     <nav aria-label="Primary">
-      <a class="cur" href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a class="cur" href="#home" data-ja="ホーム">Home</a>
+      <a href="about.html" data-ja="自己紹介">About</a>
+      <a href="#projects" data-ja="プロジェクト">Projects</a>
+      <a href="#contact" data-ja="お問い合わせ">Contact</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ja" lang="ja" aria-pressed="false">日本語</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -163,108 +227,145 @@
   <section class="hero" id="home">
     <div class="box">
       <div>
-        <h6 class="kicker">Hello, my name is</h6>
+        <h6 class="kicker" data-ja="はじめまして、私の名前は">Hello, my name is</h6>
         <div class="rule"></div>
         <h1>Amrendra Kumar Yadav</h1>
-        <h3>Electrical &amp; MEP Engineer</h3>
-        <p class="intro">I design, install, test and commission electrical systems for commercial and industrial projects in Nepal.</p>
+        <h3 data-ja="電気・MEPエンジニア">Electrical &amp; MEP Engineer</h3>
+        <p class="intro" data-ja="ネパールの商業施設・産業施設向けに、電気設備の設計・施工・試験・試運転を行っています。">I design, install, test and commission electrical systems for commercial and industrial projects in Nepal.</p>
       </div>
       <figure>
-        <img id="me" src="photo.jpg" alt="Portrait of Amrendra Kumar Yadav" width="413" height="531" />
+        <img id="me" src="photo.jpg" alt="Portrait of Amrendra Kumar Yadav" data-ja-alt="Amrendra Kumar Yadavのポートレート" width="413" height="531" />
       </figure>
     </div>
   </section>
 
   <section class="about reveal" id="about">
     <div class="box">
-      <h6 class="kicker">About me</h6>
-      <h2>I am an Electrical Engineer who works across MEP design, site installation and high-voltage testing.</h2>
+      <h6 class="kicker" data-ja="自己紹介">About me</h6>
+      <h2 data-ja="私はMEP設計、現場での施工、高電圧試験を幅広く手がける電気エンジニアです。">I am an Electrical Engineer who works across MEP design, site installation and high-voltage testing.</h2>
       <div class="cols">
-        <h3>From the test bench to the construction site.</h3>
+        <h3 data-ja="試験の現場から建設の現場まで。">From the test bench to the construction site.</h3>
         <div>
-          <p>I studied Electrical and Electronics Engineering (Power and Control) at Kathmandu University. My final year project was power factor improvement using an FC-TCR system, controlled by Arduino and validated in MATLAB Simulink.</p>
-          <p>I started in high-voltage testing and commissioning of transformers, circuit breakers and switchgear up to 132 kV. Today I work on the design and installation side of MEP projects, coordinating with architects, structural engineers, contractors and consultants.</p>
-          <a class="btn" href="#contact">Get in touch</a>
+          <p data-ja="私はカトマンズ大学で電気・電子工学（パワー・制御）を学んだ電気・電子エンジニアです。キャリアは高電圧の試験・試運転から始まり、IECおよびIEEEの安全規定に従って、132 kVまでの変圧器、遮断器、開閉装置の試験を行いました。">I am an Electrical and Electronics Engineer (Power and Control) from Kathmandu University. My career started in high-voltage testing and commissioning, where I tested transformers, circuit breakers and switchgear up to 132 kV, following IEC and IEEE safety protocols.</p>
+          <p data-ja="現在はカトマンズでMEPプロジェクトの電気エンジニアとして働いています。施工の監督、施工図・資機材承認書・施工要領書の確認、そして建築家、構造エンジニア、施工業者、コンサルタントとの調整を行っています。それ以前は、商業・産業プロジェクトの電気設備を設計し、AutoCADの図面と仕様書を作成していました。">Today I work as an Electrical Engineer on MEP projects in Kathmandu. I supervise installation, review shop drawings, material submittals and method statements, and coordinate with architects, structural engineers, contractors and consultants. Before that I designed electrical installations for commercial and industrial projects and prepared AutoCAD drawings and specifications.</p>
+          <a class="btn" href="about.html" data-ja="詳しく見る">Read more</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="defines reveal">
+  <section class="defines reveal" id="defines">
     <div class="box">
-      <h2>What defines my work?</h2>
-      <a class="arrow" href="#projects" aria-label="See projects"><svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 12h44M34 3l10 9-10 9"/></svg></a>
-      <p class="lead">Systems that are designed properly, installed carefully and tested before they are energized.</p>
-      <div class="three">
-        <div class="item">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V8h32v32H8zM8 20h32M20 8v32"/></svg>
-          <div><h4>Design</h4><p>Distribution, earthing and lighting design with AutoCAD, ETAP and DIALux, to IEC, IEEE and national codes.</p></div>
+      <h2 data-ja="私の仕事を特徴づけるもの">What defines my work?</h2>
+      <a class="arrow" href="about.html" aria-label="Read more about me" data-ja-aria-label="私について詳しく見る"><svg viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 12h44M34 3l10 9-10 9"/></svg></a>
+      <p class="lead" data-ja="適切に設計し、丁寧に施工し、通電前に必ず試験を行う設備づくり。">Systems that are designed properly, installed carefully and tested before they are energized.</p>
+      <div class="defs">
+        <div class="it">
+          <div class="h"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg><h4 data-ja="設計">Design</h4></div>
+          <p data-ja="商業・産業用建物の電気配電設備を設計しています。電力配電、接地、照明を対象に、AutoCAD、ETAP、DIALuxを使用します。">I design electrical distribution systems for commercial and industrial buildings, covering power distribution, earthing and lighting, using AutoCAD, ETAP and DIALux.</p>
         </div>
-        <div class="item">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M26 4L10 26h12l-2 18 18-24H26l0-16z"/></svg>
-          <div><h4>Testing</h4><p>Insulation resistance, turns ratio, breaker timing and relay calibration on equipment up to 132 kV.</p></div>
+        <div class="it">
+          <div class="h"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg><h4 data-ja="試験">Testing</h4></div>
+          <p data-ja="132 kVまでの変圧器、遮断器、開閉装置の試験と試運転を行ってきました。絶縁抵抗、変圧比、遮断器の動作時間、保護リレーの校正などを含みます。">I have tested and commissioned transformers, circuit breakers and switchgear up to 132 kV, including insulation resistance, turns ratio, breaker timing and relay calibration.</p>
         </div>
-        <div class="item">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="16" cy="16" r="6"/><circle cx="34" cy="16" r="6"/><path d="M4 40c0-8 5-12 12-12s12 4 12 12M24 40c0-6 4-10 10-10s10 4 10 10"/></svg>
-          <div><h4>Coordination</h4><p>Working with architects, structural engineers, contractors and consultants to deliver on schedule.</p></div>
+        <div class="it">
+          <div class="h"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg><h4 data-ja="調整">Coordination</h4></div>
+          <p data-ja="現場では、電気、空調、給排水、消防、ELV（弱電）の工事について、建築家、構造エンジニア、施工業者、コンサルタントと調整します。">On site I coordinate electrical, HVAC, plumbing, fire protection and ELV works with architects, structural engineers, contractors and consultants.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="band" aria-label="Single-line diagram">
+  <section class="band" aria-label="Interactive circuit menu" data-ja-aria-label="インタラクティブな回路メニュー">
     <div class="box">
-      <svg class="sld" id="sld" viewBox="0 0 900 150" role="img" aria-label="Single-line diagram from a 132 kV source through transformers and switchgear to loads">
-        <path class="w" d="M20 60 H150 M190 60 H300 M340 60 H470 M470 60 V120 M470 60 H880 M600 60 V120 M740 60 V120 M880 60 V120"></path>
-        <circle class="w" cx="170" cy="60" r="20"></circle>
-        <circle class="w" cx="320" cy="60" r="20"></circle>
-        <rect class="p" x="452" y="48" width="36" height="24" rx="2"></rect>
-        <rect class="p" x="582" y="48" width="36" height="24" rx="2"></rect>
-        <rect class="p" x="722" y="48" width="36" height="24" rx="2"></rect>
-        <text x="20" y="40">132 kV</text>
-        <text x="140" y="108">Transformer</text>
-        <text x="290" y="108">Transformer</text>
-        <text x="440" y="142">LV/MV switchgear</text>
-        <text x="570" y="142">Distribution</text>
-        <text x="725" y="142">Earthing</text>
+      <div class="scroll">
+      <svg class="sld" id="sld" viewBox="0 0 860 170" role="group" aria-label="Single-line diagram. Close the breaker to energize the circuit and reveal the links." data-ja-aria-label="単線結線図。ブレーカーを入れると回路に通電し、リンクが表示されます。">
+        <defs><filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7"></feGaussianBlur></filter></defs>
+
+        <!-- glow behind energized parts -->
+        <g aria-hidden="true">
+          <circle class="halo" cx="228" cy="60" r="24" style="--d:1s"></circle>
+          <circle class="halo" cx="252" cy="60" r="24" style="--d:1s"></circle>
+          <rect class="halo" x="321" y="47" width="38" height="26" rx="4" style="--d:1.3s"></rect>
+          <rect class="halo" x="561" y="47" width="38" height="26" rx="4" style="--d:1.75s"></rect>
+          <rect class="halo" x="781" y="47" width="38" height="26" rx="4" style="--d:2.2s"></rect>
+        </g>
+
+        <!-- dark wires -->
+        <path class="w" d="M20 60 H80"></path>
+        <path class="w" d="M140 60 H206"></path>
+        <circle class="w" cx="228" cy="60" r="22"></circle>
+        <circle class="w" cx="252" cy="60" r="22"></circle>
+        <path class="w" d="M274 60 H800"></path>
+        <path class="w" d="M340 60 V104"></path>
+        <path class="w" d="M580 60 V104"></path>
+        <path class="w" d="M800 60 V104"></path>
+
+        <!-- bright wires: they light up one after another -->
+        <g aria-hidden="true">
+          <path class="e" pathLength="1" d="M20 60 H80" style="--d:0s;--t:.35s"></path>
+          <path class="e" pathLength="1" d="M140 60 H206" style="--d:.45s;--t:.3s"></path>
+          <circle class="e" pathLength="1" cx="228" cy="60" r="22" style="--d:.75s;--t:.4s"></circle>
+          <circle class="e" pathLength="1" cx="252" cy="60" r="22" style="--d:.75s;--t:.4s"></circle>
+          <path class="e" pathLength="1" d="M274 60 H800" style="--d:1.05s;--t:1s"></path>
+          <path class="e" pathLength="1" d="M340 60 V104" style="--d:1.18s;--t:.35s"></path>
+          <path class="e" pathLength="1" d="M580 60 V104" style="--d:1.62s;--t:.35s"></path>
+          <path class="e" pathLength="1" d="M800 60 V104" style="--d:2.05s;--t:.35s"></path>
+        </g>
+
+        <!-- feeders -->
+        <rect class="node" x="323" y="49" width="34" height="22" rx="2" style="--d:1.15s"></rect>
+        <rect class="node" x="563" y="49" width="34" height="22" rx="2" style="--d:1.6s"></rect>
+        <rect class="node" x="783" y="49" width="34" height="22" rx="2" style="--d:2.05s"></rect>
+
+        <!-- breaker -->
+        <circle class="dot" cx="80" cy="60" r="5"></circle>
+        <circle class="dot" cx="140" cy="60" r="5"></circle>
+        <line class="blade" x1="80" y1="60" x2="140" y2="60"></line>
+        <circle class="spark" cx="140" cy="60" r="6"></circle>
+
+        <!-- current -->
+        <g class="dots" id="dots" aria-hidden="true"></g>
+
+        <!-- texts (hidden until the circuit is energized) -->
+        <text class="src" x="20" y="38" style="--d:.9s">132 kV</text>
+        <g class="lbl" style="--d:1.55s"><a href="#skills"><rect x="215" y="112" width="250" height="44" fill="transparent"></rect><text x="340" y="141" text-anchor="middle" data-ja="スキルと経歴">Skills and My Experiences</text></a></g>
+        <g class="lbl" style="--d:2s"><a href="#projects"><rect x="515" y="112" width="130" height="44" fill="transparent"></rect><text x="580" y="141" text-anchor="middle" data-ja="プロジェクト">Projects</text></a></g>
+        <g class="lbl" style="--d:2.45s"><a href="#contact"><rect x="735" y="112" width="130" height="44" fill="transparent"></rect><text x="800" y="141" text-anchor="middle" data-ja="お問い合わせ">Contact</text></a></g>
       </svg>
+      </div>
       <div class="trip-row">
-        <button class="trip" id="trip" type="button" aria-pressed="false">Trip the breaker</button>
-        <span id="status" aria-live="polite">Energized · 132 kV</span>
+        <button class="trip" id="trip" type="button" aria-pressed="false">Close the breaker</button>
+        <span id="status" class="sr" aria-live="polite"></span>
       </div>
     </div>
   </section>
 
-  <section class="two reveal">
+  <section class="two reveal" id="skills">
     <div class="box">
       <div>
-        <h2>Skills</h2>
+        <h2 data-ja="スキル">Skills</h2>
         <!-- Bar levels are set in style="--w:NN%". Change the numbers to your own. -->
-        <div class="skill"><span class="t">Electrical Design</span><div class="track"><div class="bar" style="--w:85%"><span>AutoCAD, ETAP, DIALux</span><span>85%</span></div></div></div>
-        <div class="skill"><span class="t">Testing &amp; Commissioning</span><div class="track"><div class="bar" style="--w:90%"><span>Transformers, breakers, relays</span><span>90%</span></div></div></div>
-        <div class="skill"><span class="t">Power Systems</span><div class="track"><div class="bar" style="--w:85%"><span>LV/MV switchgear, distribution, earthing</span><span>85%</span></div></div></div>
-        <div class="skill"><span class="t">MEP Coordination</span><div class="track"><div class="bar" style="--w:80%"><span>HVAC, fire protection, ELV, BMS</span><span>80%</span></div></div></div>
-        <div class="skill"><span class="t">Standards &amp; Codes</span><div class="track"><div class="bar" style="--w:80%"><span>IEC, IEEE, NEC, Nepali Standards</span><span>80%</span></div></div></div>
-        <div class="skill"><span class="t">MATLAB &amp; Simulation</span><div class="track"><div class="bar" style="--w:75%"><span>Simulink, Arduino control</span><span>75%</span></div></div></div>
-        <div class="skill"><span class="t">Documentation</span><div class="track"><div class="bar" style="--w:85%"><span>Shop drawings, submittals, reports</span><span>85%</span></div></div></div>
+        <div class="skill"><span class="t" data-ja="電気設計">Electrical Design</span><div class="track"><div class="bar" style="--w:85%"><span>AutoCAD, ETAP, DIALux</span><span>85%</span></div></div></div>
+        <div class="skill"><span class="t" data-ja="試験・試運転">Testing &amp; Commissioning</span><div class="track"><div class="bar" style="--w:90%"><span data-ja="変圧器、遮断器、リレー">Transformers, breakers, relays</span><span>90%</span></div></div></div>
+        <div class="skill"><span class="t" data-ja="電力システム">Power Systems</span><div class="track"><div class="bar" style="--w:85%"><span data-ja="低圧・中圧開閉装置、配電、接地">LV/MV switchgear, distribution, earthing</span><span>85%</span></div></div></div>
+        <div class="skill"><span class="t" data-ja="MEP調整">MEP Coordination</span><div class="track"><div class="bar" style="--w:80%"><span data-ja="空調、消防、ELV、BMS">HVAC, fire protection, ELV, BMS</span><span>80%</span></div></div></div>
+        <div class="skill"><span class="t" data-ja="MATLABとシミュレーション">MATLAB &amp; Simulation</span><div class="track"><div class="bar" style="--w:75%"><span data-ja="Simulink、Arduino制御">Simulink, Arduino control</span><span>75%</span></div></div></div>
+        <div class="skill"><span class="t" data-ja="文書作成">Documentation</span><div class="track"><div class="bar" style="--w:85%"><span data-ja="施工図、承認書、報告書">Shop drawings, submittals, reports</span><span>85%</span></div></div></div>
       </div>
       <div>
-        <h2>My Experience</h2>
+        <h2 data-ja="職務経歴">My Experience</h2>
         <div class="job">
-          <div><div class="when">March 2026 – Present</div><div class="org">Delight M and E Pvt. Ltd</div></div>
-          <div><h4>Electrical Engineer</h4><p>Coordinate and supervise MEP installation (electrical, HVAC, plumbing, fire protection, ELV). Review shop drawings, submittals and method statements, and inspect sites.</p></div>
+          <div><div class="when" data-ja="2026年3月 – 現在">March 2026 – Present</div><div class="org">Delight M and E Pvt. Ltd</div></div>
+          <div><h4 data-ja="電気エンジニア">Electrical Engineer</h4><p data-ja="MEP設備（電気、空調、給排水、消防、ELV）の施工を調整・監督しています。施工図、承認書、施工要領書を確認し、現場を検査します。">Coordinate and supervise MEP installation (electrical, HVAC, plumbing, fire protection, ELV). Review shop drawings, submittals and method statements, and inspect sites.</p></div>
         </div>
         <div class="job">
-          <div><div class="when">Aug 2025 – March 2026</div><div class="org">Clean Power T&amp;C</div></div>
-          <div><h4>Electrical Engineer</h4><p>Designed and oversaw electrical installations for commercial and industrial projects. Prepared AutoCAD drawings and specifications, and supervised contractors.</p></div>
+          <div><div class="when" data-ja="2025年5月 – 2026年3月">May 2025 – March 2026</div><div class="org">Clean Power T&amp;C</div></div>
+          <div><h4 data-ja="電気エンジニア">Electrical Engineer</h4><p data-ja="132 kVまでの変圧器、遮断器、開閉装置の高電圧試験・試運転から始まり、その後は商業・産業プロジェクトの電気設備の設計と施工管理、AutoCAD図面の作成、施工業者の監督を担当しました。">Started in high-voltage testing and commissioning of transformers, circuit breakers and switchgear up to 132 kV, then moved to designing and overseeing electrical installations for commercial and industrial projects, preparing AutoCAD drawings and supervising contractors.</p></div>
         </div>
         <div class="job">
-          <div><div class="when">May 2025 – Aug 2025</div><div class="org">Clean Power T&amp;C</div></div>
-          <div><h4>High Voltage Testing Engineer (Internship)</h4><p>Testing and commissioning of transformers, circuit breakers and switchgear up to 132 kV, with technical reports for handover.</p></div>
-        </div>
-        <div class="job">
-          <div><div class="when">Dec 2020 – June 2025</div><div class="org">Kathmandu University</div></div>
-          <div><h4>B.E. Electrical &amp; Electronics (Power and Control)</h4><p>Final year project: power factor improvement using an FC-TCR system with Arduino-based control, validated in MATLAB Simulink.</p></div>
+          <div><div class="when" data-ja="2020年12月 – 2025年6月">Dec 2020 – June 2025</div><div class="org" data-ja="カトマンズ大学">Kathmandu University</div></div>
+          <div><h4 data-ja="工学士（電気・電子工学：パワー・制御）">B.E. Electrical &amp; Electronics (Power and Control)</h4></div>
         </div>
       </div>
     </div>
@@ -272,22 +373,95 @@
 
   <section class="projects reveal" id="projects">
     <div class="box">
-      <h2>Projects</h2>
+      <h2 data-ja="プロジェクト">Projects</h2>
       <div class="gallery">
         <article class="card">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h10l4-12 8 24 4-12h14"/></svg>
-          <h4>Power Factor Improvement</h4>
-          <p>FC-TCR system with Arduino-based control, validated in MATLAB Simulink.</p>
+          <svg class="art" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a 132 kV power transformer connected to a test set" data-ja-aria-label="試験装置に接続された132 kV電力変圧器のイラスト">
+  <defs>
+    <linearGradient id="hvbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#243673"/><stop offset="1" stop-color="#0a1130"/></linearGradient>
+    <pattern id="hvgrid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".05"/></pattern>
+    <g id="hvstr"><path d="M0 0V18" stroke="#bfd1ff" stroke-width="2"/><ellipse cx="0" cy="24" rx="12" ry="3.5" fill="#bfd1ff"/><ellipse cx="0" cy="32" rx="12" ry="3.5" fill="#bfd1ff"/><ellipse cx="0" cy="40" rx="12" ry="3.5" fill="#bfd1ff"/><ellipse cx="0" cy="48" rx="12" ry="3.5" fill="#bfd1ff"/><path d="M0 52V160" stroke="#bfd1ff" stroke-width="2"/></g>
+    <g id="hvbush"><rect x="-6" y="170" width="12" height="72" fill="#cfdcff"/><ellipse cx="0" cy="182" rx="11" ry="3.5" fill="#243673" stroke="#bfd1ff"/><ellipse cx="0" cy="196" rx="11" ry="3.5" fill="#243673" stroke="#bfd1ff"/><ellipse cx="0" cy="210" rx="11" ry="3.5" fill="#243673" stroke="#bfd1ff"/><ellipse cx="0" cy="224" rx="11" ry="3.5" fill="#243673" stroke="#bfd1ff"/><circle cx="0" cy="166" r="6" fill="#35c7ff"/></g>
+  </defs>
+  <rect width="600" height="480" fill="url(#hvbg)"/>
+  <rect width="600" height="480" fill="url(#hvgrid)"/>
+  <circle cx="320" cy="250" r="190" fill="#35c7ff" opacity=".07"/>
+  <circle cx="520" cy="60" r="2" fill="#fff" opacity=".5"/><circle cx="560" cy="110" r="1.6" fill="#fff" opacity=".4"/><circle cx="450" cy="40" r="1.6" fill="#fff" opacity=".4"/><circle cx="90" cy="40" r="1.8" fill="#fff" opacity=".4"/>
+  <!-- ground -->
+  <rect y="340" width="600" height="140" fill="#070c24" opacity=".6"/>
+  <path d="M0 340H600" stroke="#bfd1ff" stroke-opacity=".35"/>
+  <!-- faint lattice tower -->
+  <g fill="none" stroke="#7f9be0" stroke-opacity=".45" stroke-width="2">
+    <path d="M56 340L98 70L140 340M70 110H126M78 80H118"/>
+    <path d="M72 270H124M80 210H116M88 150H108M72 270L116 210M124 270L80 210M80 210L108 150M116 210L88 150"/>
+  </g>
+  <!-- incoming conductors -->
+  <use href="#hvstr" x="295"/><use href="#hvstr" x="335"/><use href="#hvstr" x="375"/>
+  <!-- transformer -->
+  <g fill="#1b2a5e" stroke="#35c7ff" stroke-width="1.5">
+    <rect x="394" y="246" width="9" height="94" rx="3"/><rect x="408" y="246" width="9" height="94" rx="3"/><rect x="422" y="246" width="9" height="94" rx="3"/><rect x="436" y="246" width="9" height="94" rx="3"/><rect x="450" y="246" width="9" height="94" rx="3"/>
+    <rect x="201" y="246" width="9" height="94" rx="3"/><rect x="187" y="246" width="9" height="94" rx="3"/><rect x="173" y="246" width="9" height="94" rx="3"/><rect x="159" y="246" width="9" height="94" rx="3"/><rect x="145" y="246" width="9" height="94" rx="3"/>
+  </g>
+  <rect x="210" y="250" width="180" height="90" rx="8" fill="#1b2a5e" stroke="#35c7ff" stroke-width="2"/>
+  <rect x="204" y="240" width="192" height="12" rx="4" fill="#243673" stroke="#35c7ff" stroke-width="2"/>
+  <rect x="214" y="206" width="50" height="24" rx="12" fill="#1b2a5e" stroke="#35c7ff" stroke-width="2"/>
+  <rect x="234" y="230" width="10" height="10" fill="#243673" stroke="#35c7ff" stroke-width="1.5"/>
+  <use href="#hvbush" x="295"/><use href="#hvbush" x="335"/><use href="#hvbush" x="375"/>
+  <path d="M230 275H370M230 295H370M230 315H370" stroke="#35c7ff" stroke-opacity=".25" stroke-width="2"/>
+  <text x="396" y="130" fill="#bfd1ff" font-size="20" font-weight="500" font-family="'Barlow Semi Condensed', 'Noto Sans JP', sans-serif">132 kV</text>
+  <!-- earthing -->
+  <path d="M300 340V352M286 352H314M292 359H308M297 366H303" stroke="#bfd1ff" stroke-width="2" fill="none"/>
+  <!-- test set and cable -->
+  <path d="M100 290C122 200 190 150 289 166" fill="none" stroke="#e8a800" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="291" cy="166" r="4" fill="#e8a800"/>
+  <rect x="36" y="290" width="84" height="50" rx="6" fill="#16213f" stroke="#e8a800" stroke-width="2"/>
+  <rect x="44" y="298" width="42" height="20" rx="2" fill="#0a1130" stroke="#35c7ff"/>
+  <polyline points="46,310 54,310 58,302 64,316 70,306 74,310 84,310" fill="none" stroke="#35c7ff" stroke-width="1.5"/>
+  <circle cx="102" cy="308" r="9" fill="none" stroke="#e8a800" stroke-width="2"/><path d="M102 308L108 302" stroke="#e8a800" stroke-width="2"/>
+  <circle cx="52" cy="330" r="4" fill="#e8a800"/><circle cx="72" cy="330" r="4" fill="#bfd1ff"/>
+  <!-- warning sign -->
+  <path d="M500 282V340" stroke="#bfd1ff" stroke-width="3"/>
+  <polygon points="500,236 526,282 474,282" fill="#e8a800"/>
+  <polygon points="502,246 492,266 499,266 496,277 510,258 502,258" fill="#16213f"/>
+</svg>
+          <h4 data-ja="高電圧試験・試運転">HV Testing &amp; Commissioning</h4>
+          <p data-ja="132 kVまでの変圧器、遮断器、開閉装置。">Transformers, circuit breakers and switchgear up to 132 kV.</p>
         </article>
         <article class="card">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M26 4L10 26h12l-2 18 18-24H26l0-16z"/></svg>
-          <h4>HV Testing &amp; Commissioning</h4>
-          <p>Transformers, circuit breakers and switchgear up to 132 kV.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V8h32v32H8zM8 20h32M20 8v32"/></svg>
-          <h4>MEP Electrical Design</h4>
-          <p>Circuit and load design, drawings and coordination for building projects.</p>
+          <svg class="art" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of an electrical layout drawing with lights, sockets, a distribution board and circuits" data-ja-aria-label="照明、コンセント、分電盤、回路を示す電気設備図のイラスト">
+  <defs>
+    <linearGradient id="mepbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b6fa0"/><stop offset="1" stop-color="#0a3558"/></linearGradient>
+    <pattern id="mepgrid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#ffffff" stroke-opacity=".08"/></pattern>
+    <g id="mlight"><circle r="9" fill="#0a3558" stroke="#ffd35a" stroke-width="2"/><path d="M-6 -6L6 6M6 -6L-6 6" stroke="#ffd35a" stroke-width="2"/></g>
+  </defs>
+  <rect width="600" height="480" fill="url(#mepbg)"/>
+  <rect width="600" height="480" fill="url(#mepgrid)"/>
+  <text x="50" y="44" fill="#dff3ff" font-size="15" letter-spacing="3" font-family="'Barlow Semi Condensed', 'Noto Sans JP', sans-serif" data-ja="電気設備レイアウト">ELECTRICAL LAYOUT</text>
+  <!-- floor plan -->
+  <rect x="50" y="60" width="380" height="260" fill="#ffffff" fill-opacity=".05" stroke="#dff3ff" stroke-width="4"/>
+  <path d="M210 60V145M210 180V200M50 200H190M230 200H330M330 200V240M330 275V320M330 200H430" fill="none" stroke="#dff3ff" stroke-width="3"/>
+  <!-- circuits -->
+  <g fill="none" stroke="#7fdcff" stroke-width="2" stroke-dasharray="6 5">
+    <path d="M77 282V130H121"/><path d="M92 292H130V269"/><path d="M92 302H270V269"/><path d="M270 251V139"/><path d="M279 130H371"/><path d="M380 139V251"/>
+  </g>
+  <!-- lights -->
+  <use href="#mlight" x="130" y="130"/><use href="#mlight" x="130" y="260"/><use href="#mlight" x="270" y="130"/><use href="#mlight" x="270" y="260"/><use href="#mlight" x="380" y="130"/><use href="#mlight" x="380" y="260"/>
+  <!-- sockets and switches -->
+  <g fill="#dff3ff"><circle cx="50" cy="110" r="4.5"/><circle cx="50" cy="250" r="4.5"/><circle cx="430" cy="110" r="4.5"/><circle cx="430" cy="260" r="4.5"/><circle cx="210" cy="100" r="4.5"/><circle cx="290" cy="200" r="4.5"/><circle cx="330" cy="300" r="4.5"/></g>
+  <g fill="#ffd35a"><rect x="198" y="158" width="8" height="8"/><rect x="236" y="204" width="8" height="8"/></g>
+  <!-- distribution board -->
+  <rect x="62" y="282" width="30" height="28" rx="3" fill="#0a3558" stroke="#ffd35a" stroke-width="2"/>
+  <path d="M68 291H86M68 297H86M68 303H86" stroke="#ffd35a" stroke-width="2"/>
+  <!-- legend -->
+  <g font-family="'Barlow Semi Condensed', 'Noto Sans JP', sans-serif" font-size="16" fill="#dff3ff">
+    <use href="#mlight" x="472" y="100" transform="translate(0 0)"/><text x="492" y="106" data-ja="照明">Light</text>
+    <circle cx="472" cy="135" r="4.5"/><text x="492" y="140" data-ja="コンセント">Socket</text>
+    <rect x="464" y="162" width="16" height="16" rx="2" fill="#0a3558" stroke="#ffd35a" stroke-width="2"/><text x="492" y="175" data-ja="分電盤">Board</text>
+    <path d="M464 205H480" stroke="#7fdcff" stroke-width="2" stroke-dasharray="4 3"/><text x="492" y="210" data-ja="回路">Circuit</text>
+  </g>
+</svg>
+          <h4 data-ja="MEP電気設計">MEP Electrical Design</h4>
+          <p data-ja="建築プロジェクトにおける回路・負荷設計、図面作成、調整。">Circuit and load design, drawings and coordination for building projects.</p>
         </article>
       </div>
     </div>
@@ -298,27 +472,30 @@
   <div class="box">
     <div class="grid">
       <div>
-        <h2>Based in Kathmandu, Nepal.</h2>
-        <a class="get" href="mailto:yadavamrendra083@gmail.com">Get in touch</a>
+        <h2 data-ja="拠点：ネパール・カトマンズ">Based in Kathmandu, Nepal.</h2>
+        <a class="get" href="mailto:yadavamrendra083@gmail.com" data-ja="お問い合わせ">Get in touch</a>
       </div>
       <div>
-        <h2>Contact</h2>
+        <h3 class="fh" data-ja="連絡先">Contact</h3>
         <ul>
           <li><a class="l" href="mailto:yadavamrendra083@gmail.com">yadavamrendra083@gmail.com</a></li>
-          <li><a class="l" href="tel:+9779844330025">+977-9844330025</a></li>
-          <li><a class="l" href="https://www.linkedin.com/in/amrendra-kumar-yadav-b743a4349" target="_blank" rel="noopener">linkedin.com/in/amrendra-kumar-yadav</a></li>
         </ul>
       </div>
       <div>
-        <h2>Links</h2>
+        <h3 class="fh" data-ja="ソーシャル">Social</h3>
         <ul>
-          <li><a class="l" href="#about">About</a></li>
-          <li><a class="l" href="#projects">Projects</a></li>
+          <li><a class="l" href="https://www.instagram.com/____amrendra/" target="_blank" rel="noopener">Instagram</a></li>
           <li><a class="l" href="https://www.linkedin.com/in/amrendra-kumar-yadav-b743a4349" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
+      <div>
+        <h3 class="fh" data-ja="サービス">Services</h3>
+        <ul>
+          <li><a class="l" href="Amrendra_CV_2026.pdf" download data-ja="履歴書">Resume</a></li>
+        </ul>
+      </div>
     </div>
-    <p class="copy">© 2026 Amrendra Kumar Yadav. References available on request.</p>
+    <p class="copy" data-ja="© 2026 Amrendra Kumar Yadav. 推薦者の連絡先はご希望に応じてお伝えします。">© 2026 Amrendra Kumar Yadav. References available on request.</p>
   </div>
 </footer>
 
@@ -336,12 +513,57 @@
   } else { items.forEach(function (s) { s.classList.add('in'); }); }
   setTimeout(function () { items.forEach(function (s) { s.classList.add('in'); }); }, 2500);
 
-  var sld = document.getElementById('sld'), trip = document.getElementById('trip'), status = document.getElementById('status');
+  var sld = document.getElementById('sld'), trip = document.getElementById('trip'), status = document.getElementById('status'), dotsG = document.getElementById('dots');
+  var NS = 'http://www.w3.org/2000/svg';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var SP = 70, SPEED = 150, X0 = 20, X1 = 800, DROP_LEN = 44, DROPS = [340, 580, 800];
+  var main = [], drops = [], raf = null, startTimer = null, t0 = null;
+
+  function makeDot() {
+    var g = document.createElementNS(NS, 'g');
+    var glow = document.createElementNS(NS, 'circle'); glow.setAttribute('r', '7'); glow.setAttribute('class', 'glow');
+    var core = document.createElementNS(NS, 'circle'); core.setAttribute('r', '2.8'); core.setAttribute('class', 'core');
+    g.appendChild(glow); g.appendChild(core); g.setAttribute('visibility', 'hidden');
+    dotsG.appendChild(g); return g;
+  }
+  for (var i = 0; i < Math.floor((X1 - X0) / SP) + 1; i++) main.push(makeDot());
+  DROPS.forEach(function (x) { drops.push({ x: x, el: makeDot() }); });
+
+  function place(g, x, y) { g.setAttribute('visibility', 'visible'); g.setAttribute('transform', 'translate(' + x + ' ' + y + ')'); }
+  function frame(ts) {
+    if (t0 === null) t0 = ts;
+    var s = (ts - t0) / 1000 * SPEED, ph = s % SP;
+    main.forEach(function (g, j) {
+      var x = X0 + ph + j * SP;
+      if (x > X1) g.setAttribute('visibility', 'hidden'); else place(g, x, 60);
+    });
+    drops.forEach(function (d) {
+      var q = (((s - (d.x - X0)) % SP) + SP) % SP;
+      if (q <= DROP_LEN) place(d.el, d.x, 60 + q); else d.el.setAttribute('visibility', 'hidden');
+    });
+    raf = requestAnimationFrame(frame);
+  }
+  function startFlow() { if (reduce) return; t0 = null; dotsG.classList.add('show'); raf = requestAnimationFrame(frame); }
+  function stopFlow() {
+    clearTimeout(startTimer); if (raf) cancelAnimationFrame(raf); raf = null;
+    dotsG.classList.remove('show');
+  }
+
+  var TXT = {
+    en: { close: 'Close the breaker', trip: 'Trip the breaker', on: 'Breaker closed. Circuit energized. Links to Skills and My Experiences, Projects and Contact are now available.', off: 'Breaker tripped. Circuit de-energized.' },
+    ja: { close: 'ブレーカーを入れる', trip: 'ブレーカーを落とす', on: 'ブレーカーが入りました。回路に通電しました。スキルと経歴、プロジェクト、お問い合わせへのリンクが使えます。', off: 'ブレーカーが落ちました。回路の通電が止まりました。' }
+  };
+  function tripUI(announce) {
+    var on = sld.classList.contains('on'), S = TXT[window.LANG === 'ja' ? 'ja' : 'en'];
+    trip.textContent = on ? S.trip : S.close;
+    trip.setAttribute('aria-pressed', on ? 'true' : 'false');
+    if (announce) status.textContent = on ? S.on : S.off;
+  }
+  window.tripUI = tripUI;
   trip.addEventListener('click', function () {
-    var off = sld.classList.toggle('off');
-    trip.textContent = off ? 'Close the breaker' : 'Trip the breaker';
-    trip.setAttribute('aria-pressed', off ? 'true' : 'false');
-    status.textContent = off ? 'De-energized · 0 V' : 'Energized · 132 kV';
+    var on = sld.classList.toggle('on');
+    tripUI(true);
+    if (on) { startTimer = setTimeout(startFlow, 2400); } else { stopFlow(); }
   });
 
   var links = document.querySelectorAll('header nav a');
@@ -844,6 +1066,58 @@
 "AdxBpBYVKRWE4c6uy7Xst26i2h5S0uJGygEyJ9DXV1RXRJGr48SiwuSnBCZ+VfCriit5a1GVFSiT1M11dUMnSIDS8yTTRwDHI11d",
 "VJI5JzFGdgeddXUACdifOkTvXV1NgcSYo0ZPqa6uoA4DFKokbeVdXUIBtYk5ptBrq6gTDPPyNKkkCurqAZ//2Q=="
 ].join("");document.getElementById("me").src="data:image/jpeg;base64,"+d;})();
+</script>
+<script>
+/* language switch: English (default) and Japanese. Japanese text lives in data-ja attributes. */
+(function () {
+  var root = document.documentElement;
+  function stored() {
+    var m = /[?&]lang=(ja|en)\b/.exec(location.search);
+    if (m) return m[1];
+    try { var v = localStorage.getItem('lang'); if (v === 'ja' || v === 'en') return v; } catch (e) {}
+    return 'en';
+  }
+  function setAttrs(l, attr) {
+    document.querySelectorAll('[data-ja-' + attr + ']').forEach(function (el) {
+      if (!el.hasAttribute('data-en-' + attr)) el.setAttribute('data-en-' + attr, el.getAttribute(attr) || '');
+      el.setAttribute(attr, l === 'ja' ? el.getAttribute('data-ja-' + attr) : el.getAttribute('data-en-' + attr));
+    });
+  }
+  function apply(l, persist) {
+    window.LANG = l; root.lang = l;
+    document.querySelectorAll('[data-ja]').forEach(function (el) {
+      var isTitle = el.tagName === 'TITLE';
+      if (el.dataset.en === undefined) el.dataset.en = isTitle ? el.textContent : el.innerHTML;
+      var v = l === 'ja' ? el.dataset.ja : el.dataset.en;
+      if (isTitle) el.textContent = v; else el.innerHTML = v;
+    });
+    ['aria-label', 'alt', 'content'].forEach(function (a) { setAttrs(l, a); });
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang') === l ? 'true' : 'false');
+    });
+    /* keep the chosen language when moving between pages */
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('data-h') || a.getAttribute('href');
+      if (!/^(index|about)\.html/.test(h)) return;
+      a.setAttribute('data-h', h);
+      var p = h.split('#');
+      a.setAttribute('href', p[0] + (l === 'ja' ? '?lang=ja' : '') + (p[1] ? '#' + p[1] : ''));
+    });
+    if (window.tripUI) window.tripUI(false);
+    if (persist) {
+      try { localStorage.setItem('lang', l); } catch (e) {}
+      try {
+        var u = new URL(location.href);
+        if (l === 'ja') u.searchParams.set('lang', 'ja'); else u.searchParams.delete('lang');
+        history.replaceState(null, '', u.href);
+      } catch (e) {}
+    }
+  }
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-lang'), true); });
+  });
+  apply(stored(), false);
+})();
 </script>
 </body>
 </html>
